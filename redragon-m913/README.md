@@ -1,4 +1,6 @@
-# Redragon M913 Gaming Mouse Software
+![redragon-m913 Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/redragon.png "Redragon M913 Gaming Mouse Software Logo")
+
+# [Redragon M913 Gaming Mouse Software](https://community.chocolatey.org/packages/redragon-m913)
 
 Allows you to:
 

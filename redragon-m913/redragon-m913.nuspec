@@ -55,6 +55,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
       # Redragon M913 Gaming Mouse Software
 
       Allows you to:
+      
       - Customize the DPI
       - Set a number of key presses with a delay in between all from a single key press
       - Change the backlight mode of the logo
