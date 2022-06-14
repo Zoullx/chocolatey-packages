@@ -2,7 +2,7 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://mediadl.musictribe.com/media/PLM/sftp/incoming/hybris/import/goxlr/download/GoXLR_Driver_v5.12.0_2021-06-28.zip'
 
-Install-ChocolateyZipPackage -PackageName $env:ChocolateyPackageName -Url $url -UnzipLocation $toolsDir
+Install-ChocolateyZipPackage -PackageName $env:ChocolateyPackageName -Url $url -UnzipLocation $toolsDir -Checksum 10446A5D32B0B8F65852959C2E78EEB88A1D5F88AE2E414B28496C1FC3B5485C -ChecksumType sha256
 
 $fileName = (Get-ChildItem $toolsDir -Filter *.exe | Select-Object -First 1).Name
 $fileLocation = Join-Path $toolsDir $fileName
@@ -19,4 +19,4 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
