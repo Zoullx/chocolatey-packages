@@ -2,7 +2,15 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://mediadl.musictribe.com/media/PLM/sftp/incoming/hybris/import/goxlr/download/GoXLR_App_v1.4.25.190.zip'
 
-Install-ChocolateyZipPackage -PackageName $env:ChocolateyPackageName -Url $url -UnzipLocation $toolsDir -Checksum 288874AC262F19E71360407AF39DBCC749A1EB87C7E10CEBC8F12F40448A77CA -ChecksumType sha256
+$zipPackageArgs = @{
+  packageName   = $env:ChocolateyPackageName
+  url           = $url
+  unzipLocation = $toolsDir
+  checksum      = '288874AC262F19E71360407AF39DBCC749A1EB87C7E10CEBC8F12F40448A77CA'
+  checksumType  = 'sha256'
+}
+
+Install-ChocolateyZipPackage @zipPackageArgs
 
 $fileName = (Get-ChildItem $toolsDir -Filter *.exe | Select-Object -First 1).Name
 $fileLocation = Join-Path $toolsDir $fileName
