@@ -16,7 +16,10 @@ If WinExist(winTitle)
     ; Select a Language
     ; English by default, unless otherwise stated
     WinActivate
-    ControlClick, x1830 y1065, %winTitle% ; Continue
+    WinGetPos,,, Width, Height
+    ContinueXPos := Width * 0.89
+    ContinueYPos := Height * 0.89
+    ControlClick, x%ContinueXPos% y%ContinueYPos%, %winTitle% ; Continue
 }
 
 Sleep, 1500
@@ -24,8 +27,11 @@ WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
     WinActivate
+    WinGetPos,,, Width, Height
+    ContinueXPos := Width * 0.89
+    ContinueYPos := Height * 0.89
     ; Accept components and component licenses
-    ControlClick, x1830 y1065, %winTitle% ; Continue
+    ControlClick, x%ContinueXPos% y%ContinueYPos%, %winTitle% ; Continue
 }
 
 Sleep, 2000
@@ -33,10 +39,15 @@ WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
     WinActivate
+    WinGetPos,,, Width, Height
+    AcceptXPos := Width * 0.105
+    AcceptYPos := Height * 0.8
+    ContinueXPos := Width * 0.89
+    ContinueYPos := Height * 0.89
     ; Accept Rockstar License Agreement
-    MouseClick, left, 215, 960 ; Accept License
+    MouseClick, left, %AcceptXPos%, %AcceptYPos% ; Accept License
     Sleep, 500
-    ControlClick, x1830 y1065, %winTitle% ; Continue
+    ControlClick, x%ContinueXPos% y%ContinueYPos%, %winTitle% ; Continue
 }
 
 Sleep, 1500
@@ -44,20 +55,28 @@ WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
     WinActivate
+    WinGetPos,,, Width, Height
+    ContinueXPos := Width * 0.89
+    ContinueYPos := Height * 0.89
     ; Choose install location and add Desktop Shortcut
-    ControlClick, x1830 y1065, %winTitle% ; Continue (w/ defaults)
+    ControlClick, x%ContinueXPos% y%ContinueYPos%, %winTitle% ; Continue (w/ defaults)
 }
 
 ; Wait for redistributables and launcher setup
-Sleep, 7000
+Sleep, 8000
 WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
     WinActivate
+    WinGetPos,,, Width, Height
+    DontRunXPos := Width * 0.107
+    DontRunYPos := Height * 0.612
+    ContinueXPos := Width * 0.89
+    ContinueYPos := Height * 0.89
     ; Finalize installation
-    MouseClick, left, 220, 735 ; Don't run on install close
+    MouseClick, left, %DontRunXPos%, %DontRunYPos% ; Don't run on install close
     Sleep, 500
-    ControlClick, x1830 y1065, %winTitle% ; Close
+    ControlClick, x%ContinueXPos% y%ContinueYPos%, %winTitle% ; Close
 }
 
 Exit
