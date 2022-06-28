@@ -10,7 +10,7 @@ $packageArgs = @{
   fileType      = 'EXE'
   url           = $url
   softwareName  = 'Rockstar Games Launcher*'
-  checksum      = 'DA8DA950C16E8DB4246F2362306DF37778A6676AB1966A38E843DF60111197ED'
+  checksum      = '7FE83D3FD2A1CEFE49B69FB4DAEC95092E129CC79EE86EA11466AC32F75D8A5C'
   checksumType  = 'sha256'
   validExitCodes= @(0, 3010, 1641)
 }
