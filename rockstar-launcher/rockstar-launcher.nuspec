@@ -71,6 +71,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" /> -->
       <dependency id="autohotkey" />
+      <dependency id="vcredist140" version="14.22.27821" />
       <!-- <dependency id="chocolatey-core.extension" version="1.1.0" /> -->
     </dependencies>
     <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension
