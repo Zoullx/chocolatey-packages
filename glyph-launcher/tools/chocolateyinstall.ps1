@@ -10,7 +10,7 @@ $packageArgs = @{
   fileType      = 'EXE'
   url           = $url
   softwareName  = 'Glyph*'
-  checksum      = '25D2E86FF7E6CA61B9E1212AEB793C78D939881DB87C45D351D9C4A20BDBAD36'
+  checksum      = 'F1EE54C7E27FC0E7365FB3F4AB97B6B3EE93A335BD98FC4B5431DE1C47FCD08E'
   checksumType  = 'sha256'
   validExitCodes= @(0, 3010, 1641)
 }

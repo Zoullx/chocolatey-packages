@@ -21,7 +21,7 @@ If WinExist(winTitle)
 ; Process Window
 ; Wait for the uninstallation to finish
 WinWait, %winTitle%,, 15
-Sleep, 5000
+Sleep, 7000
 
 ; Confirm uninstallation
 WinWait, %winTitle%,, 15
