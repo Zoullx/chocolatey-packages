@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>5.12.0.00001</version>
+    <version>5.12.0.00002</version>
     <packageSourceUrl>https://github.com/Zoullx/chocolatey-packages/tree/master/goxlr-driver</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>Zoull</owners>
@@ -34,13 +34,13 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>GoXLR Driver</title>
+    <title>[Deprecated] GoXLR Driver</title>
     <authors>TC Helicon</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://www.tc-helicon.com/product.html?modelCode=P0CQK</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/icons/goxlr-driver.png</iconUrl>
+    <!-- <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/icons/goxlr-driver.png</iconUrl> -->
     <copyright>© 2019 TC Helicon</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl> -->
@@ -52,14 +52,8 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>goxlr gaming mixer audio driver utility</tags>
     <summary>The GoXLR Driver is the driver that controls the GoXLR Mixer hardware, the Revolutionary Online Broadcaster Platform with 4-Channel Mixer, Motorized Faders, Sound Board and Vocal Effects</summary>
     <description>
-      # GoXLR
-      Take everything you used to know about broadcasting audio and forget it. What would take dozens of pieces of hardware and software can now be achieved by one sleek and intuitive solution. Mix your audio in real time, change your voice, use industry defining hardware and software, and engage your audience like never before.
-
-      # The Perfect Mix Every Time
-      GoXLR gives you control of your audio like never before. With a 4-channel mixer, you can control the volume of all your audio sources in real time so you can keep your focus where it needs to be.
-
-      # A Smooth Operator
-      With customizable motorized faders, you'll always come back to sound the way you want it. Change the LCD scribble strips to personalize GoXLR and make it your own.
+      The GoXLR Driver package is deprecated due to no longer existing on the TC Helicon website.
+      The GoXLR package should no longer require this driver package.
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->
@@ -85,7 +79,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
   </metadata>
   <files>
     <!-- this section controls what actually gets packaged into the Chocolatey package -->
-    <file src="tools\**" target="tools" />
+    <file />
     <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
