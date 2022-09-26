@@ -24,7 +24,7 @@ If WinExist(winTitle)
 ; Download Window
 ; Wait for the download to finish
 WinWait, %winTitle%,, 15
-Sleep, 15000
+Sleep, 20000
 
 ; Choose install location
 ; C:\Program Files (x86)\Battle.net (Default)
