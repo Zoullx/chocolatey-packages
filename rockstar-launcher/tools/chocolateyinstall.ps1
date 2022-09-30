@@ -1,8 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ahkExe     = 'AutoHotKey'
-$ahkFile    = "$toolsDir\rockstar-launcher_install.ahk"
-$url = 'https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe'
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$ahkExe   = 'AutoHotKey'
+$ahkFile  = "$toolsDir\rockstar-launcher_install.ahk"
+$url      = 'https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe'
+
+# DO NOT CHANGE THESE MANUALLY, USE update.ps1
+$checksum = '6366b219c1814046dc1f3788a6d797f67fee0b3264b4cf0939c17adb4f7abcc6'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -10,7 +13,7 @@ $packageArgs = @{
   fileType      = 'EXE'
   url           = $url
   softwareName  = 'Rockstar Games Launcher*'
-  checksum      = 'B2C39C684EA11045B500A389BEA611FE06C6AF6E5C2485DB5D3332868340533F'
+  checksum      = $checksum
   checksumType  = 'sha256'
   validExitCodes= @(0, 3010, 1641)
 }
