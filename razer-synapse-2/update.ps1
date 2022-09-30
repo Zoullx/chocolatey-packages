@@ -24,18 +24,18 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $response = try {
-    Invoke-WebRequest -Uri $razerSynapseUrl -UseBasicParsing -MaximumRedirection 0
+    Invoke-WebRequest -Uri $razerSynapseUrl -UseBasicParsing -MaximumRedirection 2
   } catch {
     $_.Exception.Response
   }
-  if ($response.StatusCode -ne 302) {
+  if ($response.StatusCode -ne 200) {
     throw "HTTP $($response.StatusCode) when requesting $razerSynapseUrl"
   }
-  if (-not $response.Headers.Location) {
-    throw "No Location header returned when requesting $razerSynapseUrl"
+  if (-not $response.BaseResponse.ResponseUri.AbsoluteUri) {
+    throw "No redirection uri returned when requesting $razerSynapseUrl"
   }
 
-  $downloadUrl = $response.Headers.Location
+  $downloadUrl = $response.BaseResponse.ResponseUri.AbsoluteUri
   if (-not ($downloadUrl -match '.*_v(?<Version>.*)\.exe')) {
     throw "Could not determine version from url $downloadUrl"
   }

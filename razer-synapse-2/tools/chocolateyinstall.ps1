@@ -1,5 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$checksumType = 'sha256'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
 $url      = 'https://dl.razerzone.com/drivers/Synapse2/win/Web_Razer_Synapse_Installer_v2.21.24.41.exe'
@@ -10,7 +11,7 @@ $zipPackageArgs = @{
   url           = $url
   unzipLocation = $toolsDir
   checksum      = $checksum
-  checksumType  = 'sha256'
+  checksumType  = $checksumType
 }
 
 Install-ChocolateyZipPackage @zipPackageArgs
@@ -19,7 +20,7 @@ $pluginsDir = Join-Path $toolsDir '$PLUGINSDIR'
 $fileName = (Get-ChildItem $pluginsDir -Filter *.exe | Select-Object -First 1).Name
 $fileLocation = Join-Path $pluginsDir $fileName
 
-$internalChecksum = 'D901DA91EDB94180BB2B814D1EEB3D9DD20E2E43652C4FDE93CCAB6CDA0A332D'
+$internalChecksum = (Get-FileHash $fileLocation -Algorithm $checksumType).Hash
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -28,7 +29,7 @@ $packageArgs = @{
   file          = $fileLocation
   softwareName  = 'Razer Synapse*'
   checksum      = $internalChecksum
-  checksumType  = 'sha256'
+  checksumType  = $checksumType
   silentArgs    = '/s /v"/qn"'
   validExitCodes= @(0, 3010, 1641)
 }
