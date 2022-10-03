@@ -53,8 +53,11 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <summary>Download and play the latest Rockstar Games PC titles.</summary>
     <description>
       # _Rockstar_
+
       # _Games_
+
       # Launcher
+      
       Download and play the latest Rockstar Games PC titles
       * Play Games
       * Cloud Saves
