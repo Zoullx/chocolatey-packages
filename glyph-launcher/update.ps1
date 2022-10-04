@@ -34,13 +34,13 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $originalVersion = Get-RemoteFileVersion -Url $downloadUrl
-  $discard, $majorAndMinor, $patchAndBuildArr = $originalVersion -Split "\."
+  $discard, $majorAndMinor, $buildAndRevisionArr = $originalVersion -Split "\."
   $major, $minorArr = $majorAndMinor.ToCharArray()
   $minor = $minorArr -Join ""
-  $patchAndBuild = $patchAndBuildArr -Join "."
+  $buildAndRevision = $buildAndRevisionArr -Join "."
 
   return @{
-    Version = "$major.$minor.$patchAndBuild"
+    Version = "$major.$minor.$buildAndRevision"
     URL32   = $downloadUrl
   }
 }
