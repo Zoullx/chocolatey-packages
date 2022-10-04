@@ -10,9 +10,12 @@ $ErrorActionPreference = 'Stop'
 $downloadUrl = 'https://glyph.dyn.triongames.com/glyph/live/GlyphInstall.exe'
 
 function Get-RemoteFileVersion( [string] $Url ) {
-  $fn = [System.IO.Path]::GetTempFileName()
+  $fn = [System.IO.Path]::ChangeExtension([System.IO.Path]::GetTempFileName(), "exe")
   Invoke-WebRequest $Url -Outfile $fn -UseBasicParsing
-  $res = (Get-ItemProperty $fn).VersionInfo.FileVersion
+  $fi = Get-ItemProperty -Path $fn
+  $sfo = (New-Object -ComObject Shell.Application).Namespace($fi.Directory.FullName)
+  $sfi = $sfo.ParseName($fi.Name)
+  $res = $sfo.GetDetailsOf($sfi, [int] 298)
   Remove-Item $fn -ea ignore
   return $res
 }
@@ -30,10 +33,14 @@ function global:au_SearchReplace {
 }
 
 function global:au_GetLatest {
-  $version = Get-RemoteFileVersion -Url $downloadUrl
+  $originalVersion = Get-RemoteFileVersion -Url $downloadUrl
+  $discard, $majorAndMinor, $patchAndBuildArr = $originalVersion -Split "\."
+  $major, $minorArr = $majorAndMinor.ToCharArray()
+  $minor = $minorArr -Join ""
+  $patchAndBuild = $patchAndBuildArr -Join "."
 
   return @{
-    Version = $version
+    Version = "$major.$minor.$patchAndBuild"
     URL32   = $downloadUrl
   }
 }
