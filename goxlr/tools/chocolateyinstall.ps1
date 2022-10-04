@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe   = 'AutoHotKey'
-$ahkFile  = "$toolsDir\goxlrdriver_install.ahk"
+$ahkFile  = "$toolsDir\goxlr-driver_install.ahk"
 $url      = 'https://mediadl.musictribe.com/download/software/tchelicon/GoXLR/GoXLR-App-1.3.3.130.zip'
 
 $zipPackageArgs = @{
