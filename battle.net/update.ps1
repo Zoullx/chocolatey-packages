@@ -7,6 +7,7 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
+$au_GalleryPackageRootUrl = 'https://chocolatey.zdl.io/chocolatey/Packages'
 $downloadUrl = 'https://us.battle.net/download/getInstaller?os=win&installer=Battle.net-Setup.exe&id=undefined'
 
 function Get-RemoteFileVersion( [string] $Url ) {
