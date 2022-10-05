@@ -20,9 +20,9 @@ If WinExist(winTitle)
     ContinueXPos := Width * 0.89
     ContinueYPos := Height * 0.89
     ControlClick, x%ContinueXPos% y%ContinueYPos%, %winTitle% ; Continue
+    Sleep, 1500
 }
 
-Sleep, 1500
 WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
@@ -32,9 +32,9 @@ If WinExist(winTitle)
     ContinueYPos := Height * 0.89
     ; Accept components and component licenses
     ControlClick, x%ContinueXPos% y%ContinueYPos%, %winTitle% ; Continue
+    Sleep, 2000
 }
 
-Sleep, 2000
 WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
@@ -48,9 +48,9 @@ If WinExist(winTitle)
     MouseClick, left, %AcceptXPos%, %AcceptYPos% ; Accept License
     Sleep, 500
     ControlClick, x%ContinueXPos% y%ContinueYPos%, %winTitle% ; Continue
+    Sleep, 1500
 }
 
-Sleep, 1500
 WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
@@ -63,7 +63,9 @@ If WinExist(winTitle)
 }
 
 ; Wait for redistributables and launcher setup
-Sleep, 8000
+WinWait, %winTitle%,, 15
+Sleep, 10000
+
 WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
