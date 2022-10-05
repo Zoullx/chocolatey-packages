@@ -2,18 +2,18 @@
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$RazerSynapseDependenciesSetupUrl = 'https://cdn.razersynapse.com/1636529708apzqqkJyRazerSynapseDependenciesSetup_v3.6.1114.1.exe'
-$RazerCentralUrl = 'https://cdn.razersynapse.com/16451840740cGZUAd2RazerCentral_v7.3.35.234.exe'
-$GMSSetupUrl = 'https://cdn.razersynapse.com/1637126918NTD1BQjFRzGMS_Setup_V2.0.160.96.exe'
-$RazerStringTranslationsSetupUrl = 'https://cdn.razersynapse.com/1645757317l2oj0nFFRazerStringTranslationsSetup_v3.7.0228.022504.exe'
-$RazerSynapseConfigurationDataSetupUrl = 'https://cdn.razersynapse.com/1645773526hAk1MLvTRazerSynapseConfigurationDataSetup_v3.7.0228.022514.exe'
-$RazerSynapseSetupUrl = 'https://cdn.razersynapse.com/1646042181tNtpXEOHRazerSynapseSetup_v3.7.0228.022817.exe'
-$RazerSynapseDependenciesSetupChecksum = 'F21BFD1C50DB5E9A6E4CFA43CDBB2E768BCD0C1779EAF9F61826EF0B7729D968'
-$RazerCentralChecksum = 'C04F456450178B55A67EF3993AC4BD146A471A675F35677A2337024E48B0F5D8'
+$RazerSynapseDependenciesSetupUrl = 'https://cdn.razersynapse.com/1660119346OLtIZnKORazerSynapseDependenciesSetup_v3.7.0830.1.exe'
+$RazerCentralUrl = 'https://cdn.razersynapse.com/1660634928Cb9y9RWeRazerCentral_v7.7.0.371.exe'
+$GMSSetupUrl = 'https://cdn.razersynapse.com/16449937295FFXHFSKRzGMS_Setup_V2.0.160.96.exe'
+$RazerStringTranslationsSetupUrl = 'https://cdn.razersynapse.com/16612201526sRzIfwYRazerStringTranslationsSetup_v3.7.0830.082306.exe'
+$RazerSynapseConfigurationDataSetupUrl = 'https://cdn.razersynapse.com/1661231956K5A8ZiGTRazerSynapseConfigurationDataSetup_v3.7.0830.082312.exe'
+$RazerSynapseSetupUrl = 'https://cdn.razersynapse.com/16618497629B3OJxCxRazerSynapseSetup_v3.7.0831.083015.exe'
+$RazerSynapseDependenciesSetupChecksum = '3DADA5E79327C7EBBA4838AA9D7615A29310525D04213C311230FAA79E26CA1E'
+$RazerCentralChecksum = '4B5A1EEB6F9D9592E51CD17C8C893C968172A6E56D2194B210449CF0D8042F27'
 $GMSSetupChecksum = 'C14A80E9A3F08723FE76AED4AA0921E0970DEF69462A837EE9FF62F8B83FB0D3'
-$RazerStringTranslationsSetupChecksum = '7024550DC39B3D1BCFA73503FFB3377D34F252DC0968CAF97FBA830EEEF6D831'
-$RazerSynapseConfigurationDataSetupChecksum = '0B26EAD7EDB9A8250AD6513353E2E4591E66FEBCAE58D25F2C3D92A477B71CD7'
-$RazerSynapseSetupChecksum = 'D2F968AC1965A95D9AE705EB7C0456EC2B18729C634C63B9B830C929D0FFCFB3'
+$RazerStringTranslationsSetupChecksum = '83C55679BEA0E3FDE8C0BCEF82F15A231A6E3E45173279E22245E8A62A71EDE5'
+$RazerSynapseConfigurationDataSetupChecksum = 'AE25D4768EA06E8D50992A0EB7EC92EAC67C0785AB85B29676F16C0356F41ADB'
+$RazerSynapseSetupChecksum = '323B487C790AB26741EA6C1DD2C951E2E048C6453369A5F34691317563DC16CD'
 
 $RazerSynapseDependenciesSetupPackageArgs = @{
   packageName   = 'Razer Synapse Dependecies'
