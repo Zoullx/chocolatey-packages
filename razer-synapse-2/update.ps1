@@ -7,6 +7,7 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
+$au_GalleryPackageRootUrl = 'https://chocolatey.zdl.io/chocolatey/Packages'
 $razerSynapseUrl = 'http://rzr.to/synapse-pc-download'
 
 function global:au_BeforeUpdate {
@@ -24,7 +25,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $response = try {
-    Invoke-WebRequest -Uri $razerSynapseUrl -UseBasicParsing -MaximumRedirection 2
+    Invoke-WebRequest -Uri $razerSynapseUrl -UseBasicParsing
   } catch {
     $_.Exception.Response
   }
