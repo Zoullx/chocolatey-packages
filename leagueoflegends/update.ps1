@@ -7,6 +7,7 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
+$au_GalleryPackageRootUrl = 'https://chocolatey.zdl.io/chocolatey/Packages'
 $downloadUrl = 'https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.exe'
 
 function Get-RemoteFileVersion( [string] $Url ) {
