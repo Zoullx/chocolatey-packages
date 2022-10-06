@@ -7,6 +7,7 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
+$Env:au_PushUrl = 'https://chocolatey.zdl.io/chocolatey'
 $au_GalleryPackageRootUrl = 'https://chocolatey.zdl.io/chocolatey/Packages'
 $razerSynapseUrl = 'http://rzr.to/synapse-pc-download'
 
