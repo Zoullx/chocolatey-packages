@@ -103,6 +103,9 @@ $Options = [ordered]@{
         $global:au_IncludeStream = $Matches['stream']
         $global:au_Version       = $Matches['version']
     }
+    AfterEach = {
+        $Env:au_PushUrl = $null
+    }
 }
 
 if ($ForcedPackages) { Write-Host "FORCED PACKAGES: $ForcedPackages" }
