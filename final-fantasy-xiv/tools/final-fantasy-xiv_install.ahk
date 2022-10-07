@@ -3,7 +3,7 @@
 #Warn ; Enable warnings to assist with detecting common errors.
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 SetTitleMatchMode, 1 ; A windows's title must start with the specified WinTitle to be a match.
-SetControlDelay 0 
+SetControlDelay 0
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 winTitle = ahk_class FINAL FANTASY XIV LAUNCHER ahk_exe ffxivsetup_ft.exe
@@ -22,7 +22,10 @@ winTitle = ahk_class #32770 ahk_exe ffxivinstaller.exe
 ; Splash screen
 ; Grab the splash screen, wait a couple seconds for it to go away
 WinWait, %winTitle%,, 15
-Sleep, 3000
+If WinExist(winTitle)
+{
+    Sleep, 6000
+}
 
 ; Actual installer
 ; Wait a good amount of time for this window
@@ -42,7 +45,7 @@ If WinExist(winTitle)
     Sleep, 500
     ; Confirm settings
     Send {Enter} ; Next
-    Sleep, 1500
+    Sleep, 5000
     ; Installs
     ; Final screen with Desktop Shortcut option
     Send {Enter} ; Finish
