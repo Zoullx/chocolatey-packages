@@ -3,7 +3,7 @@
 #Warn ; Enable warnings to assist with detecting common errors.
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 SetTitleMatchMode, 1 ; A windows's title must start with the specified WinTitle to be a match.
-SetControlDelay 0 
+SetControlDelay 0
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 winTitle = ahk_class #32770 ahk_exe setup.exe
@@ -30,7 +30,10 @@ If WinExist(winTitle)
 ; Install window
 ; Wait for the download to finish
 WinWait, %winTitle%,, 15
-Sleep, 15000
+If WinExist(winTitle)
+{
+    Sleep, 15000
+}
 
 ; Installation Complete
 WinWait, %winTitle%,, 15
