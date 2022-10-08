@@ -10,7 +10,7 @@ winTitle = ahk_class FINAL FANTASY XIV LAUNCHER ahk_exe ffxivsetup_ft.exe
 
 ; Setup that loads actual installer
 ; Select region and language
-WinWait, %winTitle%,, 15
+WinWait, %winTitle%,, 120
 If WinExist(winTitle)
 {
     WinActivate
@@ -21,7 +21,7 @@ winTitle = ahk_class #32770 ahk_exe ffxivinstaller.exe
 
 ; Splash screen
 ; Grab the splash screen, wait a couple seconds for it to go away
-WinWait, %winTitle%,, 15
+WinWait, %winTitle%,, 120
 If WinExist(winTitle)
 {
     Sleep, 6000
@@ -29,7 +29,7 @@ If WinExist(winTitle)
 
 ; Actual installer
 ; Wait a good amount of time for this window
-WinWait, %winTitle%,, 120
+WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
     WinActivate
