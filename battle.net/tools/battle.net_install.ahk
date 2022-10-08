@@ -3,7 +3,7 @@
 #Warn ; Enable warnings to assist with detecting common errors.
 SendMode Input ; Recommended for new scripts due to its superior speed and reliability.
 SetTitleMatchMode, 1 ; A windows's title must start with the specified WinTitle to be a match.
-SetControlDelay 0 
+SetControlDelay 0
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
 ; Locale suppressed to be asked each time for language (enUS,frFR...)
@@ -24,7 +24,10 @@ If WinExist(winTitle)
 ; Download Window
 ; Wait for the download to finish
 WinWait, %winTitle%,, 15
-Sleep, 20000
+If WinExist(winTitle)
+{
+    Sleep, 20000
+}
 
 ; Choose install location
 ; C:\Program Files (x86)\Battle.net (Default)
