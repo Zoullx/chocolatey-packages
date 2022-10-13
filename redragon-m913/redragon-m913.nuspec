@@ -52,18 +52,18 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>redragon m913 gaming mouse driver utility</tags>
     <summary>Redragon M913 Software allows you to customize the buttons and lighting of your Impact Elite M913 Mouse.</summary>
     <description>
-      # Redragon M913 Gaming Mouse Software
+# Redragon M913 Gaming Mouse Software
 
-      Allows you to:
-      
-      * Customize the DPI
-      * Set a number of key presses with a delay in between all from a single key press
-      * Change the backlight mode of the logo
-      * Change the backlight mode of the side edge
-      * Remap 18 of the buttons
-      * Change the polling rate
-      * Independently set the buttons for either mode
-      * See an indication of the battery percentage
+Allows you to:
+
+* Customize the DPI
+* Set a number of key presses with a delay in between all from a single key press
+* Change the backlight mode of the logo
+* Change the backlight mode of the side edge
+* Remap 18 of the buttons
+* Change the polling rate
+* Independently set the buttons for either mode
+* See an indication of the battery percentage
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->

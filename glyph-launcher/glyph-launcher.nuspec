@@ -52,8 +52,8 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>glyph gamigo trion gaming launcher</tags>
     <summary>Glyph brings your favorite online games together in a single, lightweight launcher. Download and play RIFT, Trove and other incredible titles in the growing library of Glyph games today!</summary>
     <description>
-      # GET GLYPH TODAY
-      Glyph brings your favorite online games together in a single, lightweight launcher. Download and play RIFT, Trove and other incredible titles in the growing library of Glyph games today!
+# GET GLYPH TODAY
+Glyph brings your favorite online games together in a single, lightweight launcher. Download and play RIFT, Trove and other incredible titles in the growing library of Glyph games today!
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->

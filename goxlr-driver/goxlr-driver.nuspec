@@ -52,8 +52,8 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>goxlr gaming mixer audio driver utility</tags>
     <summary>The GoXLR Driver is the driver that controls the GoXLR Mixer hardware, the Revolutionary Online Broadcaster Platform with 4-Channel Mixer, Motorized Faders, Sound Board and Vocal Effects</summary>
     <description>
-      The GoXLR Driver package is deprecated due to no longer existing on the TC Helicon website.
-      The GoXLR package should no longer require this driver package.
+The GoXLR Driver package is deprecated due to no longer existing on the TC Helicon website.
+The GoXLR package should no longer require this driver package.
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->

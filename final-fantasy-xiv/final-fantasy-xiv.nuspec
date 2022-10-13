@@ -52,35 +52,35 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>final-fantasy-xiv online gaming launcher</tags>
     <summary>Final Fantasy XIV Online is an MMORPG set in the Final Fantasy universe where you play as the chosen one destined to save the world</summary>
     <description>
-      # Final Fantasy XIV Online
+# Final Fantasy XIV Online
 
-      ### Adventure awaits you beyond the horizon
+### Adventure awaits you beyond the horizon
 
-      With eight unique races and a multitude of customization options bring your inner adventurer to life
+With eight unique races and a multitude of customization options bring your inner adventurer to life
 
-      ## LIVE YOUR STORY
+## LIVE YOUR STORY
 
-      Become the Warrior of Light, and fight to deliver the realm from certain destruction.
+Become the Warrior of Light, and fight to deliver the realm from certain destruction.
 
-      #### A Realm Reborn
+#### A Realm Reborn
 
-      Hydaelyn - a vibrant planet blessed by the Light of the Crystal. Amid azure seas, encompassing the westernmost of the Three Great Continents, there lies a realm embraced by the gods and forged by heroes. Her name - Eorzea. It is here that your tale unfolds. Beckoned by the Mothercrystal - the source of all life - you must embark upon a quest to deliver the land from an eterity of Darkness.
+Hydaelyn - a vibrant planet blessed by the Light of the Crystal. Amid azure seas, encompassing the westernmost of the Three Great Continents, there lies a realm embraced by the gods and forged by heroes. Her name - Eorzea. It is here that your tale unfolds. Beckoned by the Mothercrystal - the source of all life - you must embark upon a quest to deliver the land from an eterity of Darkness.
 
-      ## FIGHT YOUR WAY
+## FIGHT YOUR WAY
 
-      Choose the job that suits your style, and team up with friends to overcome countless challenges.
-      * Join the fray with classic Classes &amp; Jobs
-      * Turn the tides with Limit Breaks
-      * Rally your friends to challenge Dungeons and Primals
+Choose the job that suits your style, and team up with friends to overcome countless challenges.
+* Join the fray with classic Classes &amp; Jobs
+* Turn the tides with Limit Breaks
+* Rally your friends to challenge Dungeons and Primals
 
-      ### Adventure is what you make of it!
+### Adventure is what you make of it!
 
-      * **Gathering**: Reap the bounties of the land and sea
-      * **Free Companies**: Form lasting friendships and memories
-      * **Housing**: Your own little slice of Eorzea
-      * **Fashion**: Save the realm in style
-      * **The Gold Saucer**: Where the magic never ends!
-      * **Crafting**: Become a realm-renowned artisan
+* **Gathering**: Reap the bounties of the land and sea
+* **Free Companies**: Form lasting friendships and memories
+* **Housing**: Your own little slice of Eorzea
+* **Fashion**: Save the realm in style
+* **The Gold Saucer**: Where the magic never ends!
+* **Crafting**: Become a realm-renowned artisan
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->

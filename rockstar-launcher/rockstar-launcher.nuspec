@@ -52,17 +52,17 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>rockstar games launcher</tags>
     <summary>Download and play the latest Rockstar Games PC titles.</summary>
     <description>
-      # _Rockstar_
+# _Rockstar_
 
-      # _Games_
+# _Games_
 
-      # Launcher
-      
-      Download and play the latest Rockstar Games PC titles
-      * Play Games
-      * Cloud Saves
-      * Shop The Collection
-      * Automatic Updates
+# Launcher
+
+Download and play the latest Rockstar Games PC titles
+* Play Games
+* Cloud Saves
+* Shop The Collection
+* Automatic Updates
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->

@@ -52,20 +52,20 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>razer synapse</tags>
     <summary>Razer Synapse is our unified configuration software that allows you to rebind controls or assign macros to any of your Razer peripherals and saves all your settings automatically to the cloud.</summary>
     <description>
-      Razer Synapse is our unified configuration software that allows you to rebind controls or assign macros to any of your Razer peripherals and saves all your settings automatically to the cloud. No more tedious device configurations when you arrive at LAN parties or tourneys, as you can pull them from the cloud, and get owning right away.
+Razer Synapse is our unified configuration software that allows you to rebind controls or assign macros to any of your Razer peripherals and saves all your settings automatically to the cloud. No more tedious device configurations when you arrive at LAN parties or tourneys, as you can pull them from the cloud, and get owning right away.
 
-      The key features of Razer Synapse are:
+The key features of Razer Synapse are:
 
-      * **Hardware Configurator**: Razer Synapse is our unified configuration software that allows you to rebind controls or assign macros to any of your Razer peripherals and saves all your settings automatically to the cloud.
-      * **Stats &amp; Heatmaps**: Track all your in-game clicks, movements and more as you put your peripherals through the paces with Razer Synapse Stats &amp; Heatmaps and analyze your gameplay with the help of automatically generated heatmaps. And no worries, stats tracking is entirely optional.
-      * **Convenient Warranty Registration &amp; Code Redemption**: Razer Synapse offers a hassle-free way to register your product warranties, check remaining warranty durations, and makes you eligible for exclusive Razerstore promotions, game beta code giveaways and other exciting treats.
+* **Hardware Configurator**: Razer Synapse is our unified configuration software that allows you to rebind controls or assign macros to any of your Razer peripherals and saves all your settings automatically to the cloud.
+* **Stats &amp; Heatmaps**: Track all your in-game clicks, movements and more as you put your peripherals through the paces with Razer Synapse Stats &amp; Heatmaps and analyze your gameplay with the help of automatically generated heatmaps. And no worries, stats tracking is entirely optional.
+* **Convenient Warranty Registration &amp; Code Redemption**: Razer Synapse offers a hassle-free way to register your product warranties, check remaining warranty durations, and makes you eligible for exclusive Razerstore promotions, game beta code giveaways and other exciting treats.
 
-      System Requirements:
+System Requirements:
 
-      * 100 Mbyte of free hard disc space
-      * Valid e-mail, software download, license acceptance, and internet connection needed to activate full features and for software updates. After activation, full features are available in optional offline mode.
+* 100 Mbyte of free hard disc space
+* Valid e-mail, software download, license acceptance, and internet connection needed to activate full features and for software updates. After activation, full features are available in optional offline mode.
 
-      For more information, see [https://www.razer.com/synapse-2](https://www.razer.com/synapse-2).
+For more information, see [https://www.razer.com/synapse-2](https://www.razer.com/synapse-2).
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <!-- =============================== -->
