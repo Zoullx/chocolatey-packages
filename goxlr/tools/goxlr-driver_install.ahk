@@ -9,12 +9,12 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 winTitle = ahk_class #32770 ahk_exe setup.exe
 
 ; Wizard start window
-WinWait, %winTitle%,, 15
+WinWait, %winTitle%,, 120
 If WinExist(winTitle)
 {
     WinActivate
     Send {Enter} ; Continue
-    Sleep 500
+    Sleep 1000
 }
 
 ; Choose install location
@@ -25,6 +25,7 @@ If WinExist(winTitle)
     ; Proceed with default
     WinActivate
     Send {Enter} ; Install
+    Sleep 1000
 }
 
 ; Install window
@@ -41,7 +42,7 @@ If WinExist(winTitle)
 {
     WinActivate
     Send {Enter} ; Continue
-    Sleep 500
+    Sleep 1000
 }
 
 ; Wizard finish window
@@ -50,7 +51,7 @@ If WinExist(winTitle)
 {
     WinActivate
     Send {Enter} ; Finish
-    Sleep 500
+    Sleep 1000
 }
 
 ; Exit wizard
