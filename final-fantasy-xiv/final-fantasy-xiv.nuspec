@@ -49,7 +49,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>final-fantasy-xiv online gaming launcher</tags>
+    <tags>final-fantasy-xiv online gaming launcher trial</tags>
     <summary>Final Fantasy XIV Online is an MMORPG set in the Final Fantasy universe where you play as the chosen one destined to save the world</summary>
     <description>
 # Final Fantasy XIV Online
