@@ -6,6 +6,9 @@ SetTitleMatchMode, 1 ; A windows's title must start with the specified WinTitle 
 SetControlDelay 0
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
+EnvGet, programFilesx86, ProgramFiles(x86)
+EnvGet, programData, ProgramData
+
 winTitle = ahk_class ArenaNet_Dialog_Class ahk_exe GwSetup.exe
 
 ; Loading Installer
@@ -33,6 +36,7 @@ If WinExist(winTitle)
 {
     Sleep, 2000
     WinClose
+    FileCreateShortcut, %programFilesx86%\Guild Wars\Gw.exe, %programData%\Microsoft\Windows\Start Menu\Programs\Guild Wars\Guild Wars.lnk
 }
 
 Exit
