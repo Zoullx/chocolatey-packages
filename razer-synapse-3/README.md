@@ -1,4 +1,4 @@
-![razer-synapse-2 Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/goxlr.png "Razer Synapse 3 Logo")
+![razer-synapse-3 Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/razer-synapse-3.png "Razer Synapse 3 Logo")
 
 # Razer Synapse 3
 
