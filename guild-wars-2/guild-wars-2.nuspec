@@ -43,8 +43,8 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/icons/guild-wars-2.png</iconUrl>
     <copyright>© 2022 ArenaNet, LLC</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl> -->
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://us.ncsoft.com/en-us/legal/ncsoft/user-agreement</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
