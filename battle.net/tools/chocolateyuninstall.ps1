@@ -8,7 +8,6 @@ $packageArgs = @{
   softwareName  = 'Battle.net*'
   fileType      = 'EXE'
   silentArgs    = '--lang=enUS --uid=battle.net --displayname="Battle.net"'
-  # installArguments = "--lang=enUS --uid=battle.net --displayname='Battle.net'"
   validExitCodes= @(0, 3010, 1605, 1614, 1641)
   file          = 'C:\ProgramData\Battle.net\Agent\Blizzard Uninstaller.exe'
 }

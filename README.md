@@ -10,6 +10,7 @@ All of the packages that I maintain on [Chocolatey](https://chocolatey.org):
 - [Guild Wars](https://community.chocolatey.org/packages/guild-wars)
 - [Guild Wars 2](https://community.chocolatey.org/packages/guild-wars-2)
 - [Humble App](https://community.chocolatey.org/packages/humble-app)
+- [League of Legends](https://community.chocolatey.org/packages/leagueoflegends)
 - [Redragon M913](https://community.chocolatey.org/packages/redragon-m913)
 - [Rockstar Games Launcher](https://community.chocolatey.org/packages/rockstar-launcher)
 
@@ -17,6 +18,5 @@ Packages that I maintain internally
 
 - Battle.net
 - EA App
-- League of Legends
 - Razer Synapse 2
 - Razer Synapse 3
