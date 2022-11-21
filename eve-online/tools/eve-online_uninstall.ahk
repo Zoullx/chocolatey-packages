@@ -20,7 +20,7 @@ If WinExist(winTitle)
 WinWait, %winTitle%,, 15
 If WinExist(winTitle)
 {
-    Sleep, 2000
+    Sleep, 3000
 }
 
 ; Finish
