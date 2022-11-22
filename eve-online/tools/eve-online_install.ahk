@@ -9,7 +9,7 @@ SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 ; CacheFolder suppressed to be set each time for Shared Cache
 RegDelete, HKEY_CURRENT_USER\SOFTWARE\CCP\EVEONLINE, CACHEFOLDER
 
-winTitle = ahk_class Qt5QWindowIcon ahk_exe EveLauncher-2162700.exe
+winTitle = EVE Online Launcher Setup ahk_class Qt5QWindowIcon
 
 ; Choose install location
 ; C:\EVE (Default)
