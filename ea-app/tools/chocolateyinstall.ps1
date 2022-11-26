@@ -18,5 +18,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+Write-Host "Waiting 20 seconds for the EA Desktop App to open to close it before finishing"
 Start-Sleep -s 20
 Start-CheckandStop "EADesktop"
