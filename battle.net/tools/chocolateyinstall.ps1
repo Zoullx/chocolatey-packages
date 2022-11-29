@@ -23,5 +23,4 @@ $packageArgs = @{
 
 Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
-Start-Sleep -s 10
-Start-CheckandStop "Battle.net"
+Start-WaitandStop "Battle.net"

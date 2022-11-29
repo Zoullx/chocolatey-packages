@@ -20,5 +20,4 @@ $packageArgs = @{
 
 Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
-Start-Sleep -s 10
-Start-CheckandStop "Glyph*"
+Start-WaitandStop "Glyph*"
