@@ -80,6 +80,7 @@ Pick up the newest games and expansions, surprise your friends with digital gift
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" /> -->
       <dependency id="autohotkey" />
+      <dependency id="chocolatey-misc-helpers.extension" />
       <!-- <dependency id="chocolatey-core.extension" version="1.1.0" /> -->
     </dependencies>
     <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension
