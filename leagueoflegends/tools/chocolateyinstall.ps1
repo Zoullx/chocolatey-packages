@@ -3,7 +3,7 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://lol.secure.dyn.riotcdn.net/channels/public/x/installer/current/live.na.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = '3b246edcc15cb1caca21071a83dedbd6b216b15c3cb322c375a32e7e7a1ece8d'
+$checksum = 'b064495909889b3ee1123290d857fa5d18324a57989ad39ec08bff372306636b'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
