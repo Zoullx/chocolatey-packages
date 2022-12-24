@@ -7,8 +7,6 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
-$Env:au_PushUrl = 'https://chocolatey.zdl.io/chocolatey'
-$au_GalleryPackageRootUrl = 'https://chocolatey.zdl.io/chocolatey/Packages'
 $razerSynapseUrl = 'http://rzr.to/synapse-3-pc-download'
 
 function global:au_GetLatest {
