@@ -20,16 +20,12 @@ $pluginsDir = Join-Path $toolsDir '$PLUGINSDIR'
 $fileName = (Get-ChildItem $pluginsDir -Filter *.exe | Select-Object -First 1).Name
 $fileLocation = Join-Path $pluginsDir $fileName
 
-$internalChecksum = (Get-FileHash $fileLocation -Algorithm $checksumType).Hash
-
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'EXE'
   file          = $fileLocation
   softwareName  = 'Razer Synapse*'
-  checksum      = $internalChecksum
-  checksumType  = $checksumType
   silentArgs    = '/s /v"/qn"'
   validExitCodes= @(0, 3010, 1641)
 }
