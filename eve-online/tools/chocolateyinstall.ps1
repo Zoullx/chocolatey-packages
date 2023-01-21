@@ -4,8 +4,8 @@ $ahkExe   = 'AutoHotKey'
 $ahkFile  = "$toolsDir\eve-online_install.ahk"
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$url      = 'http://binaries.eveonline.com/EveLauncher-2162700.exe'
-$checksum = '8B29AF73015E8EF45B07AE446FF69FCC69E704624C8FB99C2FD09512E64F6639'
+$url      = 'http://binaries.eveonline.com/EveLauncher-2198233.exe'
+$checksum = '1d9de3cd4deae5af9123ccffc73eadfa20b10e80ffe7b4353ee2ccf486ccb955'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
