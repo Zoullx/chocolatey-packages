@@ -1,0 +1,25 @@
+[InstallShield Silent]
+Version=v7.00
+File=Response File
+[File Transfer]
+OverwrittenReadOnly=NoToAll
+[{8AA23232-EF5F-4923-B917-44EDFFD4D728}-DlgOrder]
+Dlg0={8AA23232-EF5F-4923-B917-44EDFFD4D728}-SdWelcome-0
+Count=4
+Dlg1={8AA23232-EF5F-4923-B917-44EDFFD4D728}-SdLicense2Rtf-0
+Dlg2={8AA23232-EF5F-4923-B917-44EDFFD4D728}-SdStartCopy2-0
+Dlg3={8AA23232-EF5F-4923-B917-44EDFFD4D728}-SdFinishReboot-0
+[{8AA23232-EF5F-4923-B917-44EDFFD4D728}-SdWelcome-0]
+Result=1
+[{8AA23232-EF5F-4923-B917-44EDFFD4D728}-SdLicense2Rtf-0]
+Result=1
+[{8AA23232-EF5F-4923-B917-44EDFFD4D728}-SdStartCopy2-0]
+Result=1
+[Application]
+Name=LG UltraGear™ Control Center
+Version=1.73
+Company=LG Electronics Inc
+Lang=0409
+[{8AA23232-EF5F-4923-B917-44EDFFD4D728}-SdFinishReboot-0]
+Result=1
+BootOption=0
