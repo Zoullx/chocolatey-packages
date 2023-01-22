@@ -1,0 +1,15 @@
+[InstallShield Silent]
+Version=v7.00
+File=Response File
+[File Transfer]
+OverwrittenReadOnly=NoToAll
+[{E5C1B339-0E4E-49A5-859E-5E1DE1938706}-DlgOrder]
+Dlg0={E5C1B339-0E4E-49A5-859E-5E1DE1938706}-MessageBox-0
+Count=2
+Dlg1={E5C1B339-0E4E-49A5-859E-5E1DE1938706}-SdFinish-0
+[{E5C1B339-0E4E-49A5-859E-5E1DE1938706}-MessageBox-0]
+Result=6
+[{E5C1B339-0E4E-49A5-859E-5E1DE1938706}-SdFinish-0]
+Result=1
+bOpt1=0
+bOpt2=0
