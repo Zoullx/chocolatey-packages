@@ -2,6 +2,7 @@
 
 All of the packages that I maintain on [Chocolatey](https://chocolatey.org):
 
+- [EA App](https://community.chocolatey.org/packages/ea-app)
 - [EVE Online](https://community.chocolatey.org/packages/eve-online)
 - [Final Fantasy XIV](https://community.chocolatey.org/packages/final-fantasy-xiv)
 - [Glyph Launcher](https://community.chocolatey.org/packages/glyph-launcher)
@@ -11,12 +12,13 @@ All of the packages that I maintain on [Chocolatey](https://chocolatey.org):
 - [Guild Wars 2](https://community.chocolatey.org/packages/guild-wars-2)
 - [Humble App](https://community.chocolatey.org/packages/humble-app)
 - [League of Legends](https://community.chocolatey.org/packages/leagueoflegends)
+- [LG UltraGear Control Center](https://community.chocolatey.org/packages/lg-ultragear-control-center)
+- [OnScreen Control](https://community.chocolatey.org/packages/onscreen-control)
+- [Razer Synapse 2](https://community.chocolatey.org/packages/razer-synapse-2)
+- [Razer Synapse 3](https://community.chocolatey.org/packages/razer-synapse-3)
 - [Redragon M913](https://community.chocolatey.org/packages/redragon-m913)
 - [Rockstar Games Launcher](https://community.chocolatey.org/packages/rockstar-launcher)
 
 Packages that I maintain internally
 
 - Battle.net
-- EA App
-- Razer Synapse 2
-- Razer Synapse 3
