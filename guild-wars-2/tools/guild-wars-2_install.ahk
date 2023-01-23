@@ -12,16 +12,14 @@ EnvGet, appData, AppData
 ; Delete the left over AppData
 FileRemoveDir, %appData%\Guild Wars 2, 1
 
-winTitle = ahk_class ArenaNet ahk_exe Gw2Setup-64.exe
+winTitle = ahk_class ArenaNet ahk_exe Gw2.exe
 
 ; Loading Installer
 WinWait, %winTitle%,, 120
 If WinExist(winTitle)
 {
-    Sleep, 25000
+    Sleep, 10000
 }
-
-winTitle = ahk_class ArenaNet ahk_exe Gw2.exe
 
 ; Start install
 WinWait, %winTitle%,, 15
