@@ -6,7 +6,7 @@ SetTitleMatchMode, 1 ; A windows's title must start with the specified WinTitle 
 SetControlDelay 0
 SetWorkingDir %A_ScriptDir% ; Ensures a consistent starting directory.
 
-winTitle = ahk_class FINAL FANTASY XIV LAUNCHER ahk_exe ffxivsetup_ft.exe
+winTitle = ahk_class FINAL FANTASY XIV LAUNCHER ahk_exe final-fantasy-xivInstall.EXE
 
 ; Setup that loads actual installer
 ; Select region and language
