@@ -5,7 +5,7 @@ $ahkFile  = "$toolsDir\glyph-launcher_install.ahk"
 $url      = 'https://glyph.dyn.triongames.com/glyph/live/GlyphInstall.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = 'b29b57f13e370e9d4107ae2c2c1d8d1ae334c36922bfbe92bfbf8b3a65921d26'
+$checksum = '102ed19e8119e1cdd97b83ab26415bfe5f3eeb8654859c1cffd46a07cd2834e8'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
