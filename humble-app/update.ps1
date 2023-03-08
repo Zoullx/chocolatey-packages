@@ -17,6 +17,18 @@ function Get-RemoteFileVersion( [string] $Url ) {
   return $res
 }
 
+function global:au_BeforeUpdate {
+  $Latest.Checksum32 = Get-RemoteChecksum -Url $Latest.Url32 -Algorithm 'SHA256'
+}
+
+function global:au_SearchReplace {
+  @{
+    ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^[$]checksum\s*=\s*)'.*'"   = "`${1}'$($Latest.Checksum32)'"
+    }
+  }
+}
+
 function global:au_GetLatest {
   $originalVersion = Get-RemoteFileVersion -Url $downloadUrl
   $version = $originalVersion -Replace "\+","."
