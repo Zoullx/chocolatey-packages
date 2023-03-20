@@ -18,6 +18,8 @@ $packageArgs = @{
   validExitCodes= @(0, 3010, 1641)
 }
 
+Start-WaitandStop "Glyph*"
+
 Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
-Start-WaitandStop "Glyph*"
+Start-CheckandStop "Glyph*"
