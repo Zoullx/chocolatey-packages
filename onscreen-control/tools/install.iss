@@ -17,7 +17,7 @@ Result=1
 Result=1
 [Application]
 Name=OnScreen Control
-Version=7.79.0
+Version=7.95.0
 Company=LG Electronics Inc
 Lang=0409
 [{E5C1B339-0E4E-49A5-859E-5E1DE1938706}-SdFinishReboot-0]
