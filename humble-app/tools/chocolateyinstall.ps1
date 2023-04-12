@@ -3,7 +3,7 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
 $url      = 'https://www.humblebundle.com/app/download'
-$checksum = '62E4E97EC403809D9CB859E151BAE5E4946FE563D4FAFDEA4AA435D0BEE7A9C1'
+$checksum = '029bb04ced8374a32823a9af8ef5959040a7050ccb5e818bcc366d31db8a4559'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
