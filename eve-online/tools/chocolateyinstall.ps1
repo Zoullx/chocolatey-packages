@@ -1,5 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$installScript = Join-Path $toolsDir 'eve-online_install.qs'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
 $url      = 'http://binaries.eveonline.com/EveLauncher-2198233.exe'
@@ -13,7 +14,7 @@ $packageArgs = @{
   softwareName  = 'EVE Online*'
   checksum      = $checksum
   checksumType  = 'sha256'
-  silentArgs    = '--script eve-online_install.qs'
+  silentArgs    = "--script $installScript"
   validExitCodes= @(0, 3010, 1641)
 }
 
