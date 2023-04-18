@@ -16,6 +16,8 @@ if ($key.Count -eq 1) {
     $packageArgs['file'] = "$($_.UninstallString)"
 
     Uninstall-ChocolateyPackage @packageArgs
+
+    Remove-Item -Path "HKCU:\SOFTWARE\CCP\EVEONLINE\CACHEFOLDER"
   }
 } elseif ($key.Count -eq 0) {
   Write-Warning "$packageName has already been uninstalled by other means."
