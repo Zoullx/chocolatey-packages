@@ -3,8 +3,8 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installScript = Join-Path $toolsDir 'eve-online_install.qs'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$url      = 'http://binaries.eveonline.com/EveLauncher-2198233.exe'
-$checksum = '1d9de3cd4deae5af9123ccffc73eadfa20b10e80ffe7b4353ee2ccf486ccb955'
+$url      = 'http://binaries.eveonline.com/EveLauncher-2294803.exe'
+$checksum = 'a3edcf102273eb6cda5de65d44687025880a788c47af6839081074eb380ac709'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
