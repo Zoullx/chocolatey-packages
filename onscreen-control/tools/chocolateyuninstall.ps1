@@ -4,9 +4,7 @@ $silentScript = Join-Path $toolsDir 'uninstall.iss'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
   fileType      = 'EXE'
-  file          = $fileLocation
   softwareName  = 'OnScreen Control'
   silentArgs    = "-runfromtemp -l0x0409 -removeonly -f1`"$silentScript`" -s"
   validExitCodes= @(0, 3010, 1605, 1614, 1641)
