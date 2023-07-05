@@ -79,24 +79,12 @@ New-Item $glyphStartMenuRunShortcutFolder -ItemType Directory -Force
 
 # Create Start Menu run shortcut
 Install-ChocolateyShortcut -ShortcutFilePath $glyphStartMenuRunShortcut -TargetPath $glyphRunTarget -WorkingDirectory "$glyphInstallDir\"
-# $glyphStartMenuRunShortcutWshShell = New-Object -comObject WScript.Shell
-# $glyphStartMenuRunShortcutProcess = $glyphStartMenuRunShortcutWshShell.CreateShortcut($glyphStartMenuRunShortcut)
-# $glyphStartMenuRunShortcutProcess.TargetPath = $glyphRunTarget
-# $glyphStartMenuRunShortcutProcess.Save()
 
 # Create Start Menu uninstall shortcut
 Install-ChocolateyShortcut -ShortcutFilePath $glyphStartMenuUninstallShortcut -TargetPath $glyphUninstallTarget -WorkingDirectory "$glyphInstallDir\"
-# $glyphStartMenuUninstallShortcutWshShell = New-Object -comObject WScript.Shell
-# $glyphStartMenuUninstallShortcutProcess = $glyphStartMenuUninstallShortcutWshShell.CreateShortcut($glyphStartMenuUninstallShortcut)
-# $glyphStartMenuUninstallShortcutProcess.TargetPath = $glyphUninstallTarget
-# $glyphStartMenuUninstallShortcutProcess.Save()
 
 # Create Desktop shortcut
 Install-ChocolateyShortcut -ShortcutFilePath $glyphDesktopShortcut -TargetPath $glyphRunTarget -WorkingDirectory "$glyphInstallDir\"
-# $glyphDesktopShortcutWshShell = New-Object -comObject WScript.Shell
-# $glyphDesktopShortcutProcess = $glyphDesktopShortcutWshShell.CreateShortcut($glyphDesktopShortcut)
-# $glyphDesktopShortcutProcess.TargetPath = $glyphRunTarget
-# $glyphDesktopShortcutProcess.Save()
 
 # Create Protocol Registry entries
 New-Item "Registry::HKEY_CLASSES_ROOT\glyph" -Force
