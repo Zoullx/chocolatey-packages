@@ -5,7 +5,7 @@ $ahkFile  = "$toolsDir\rockstar-launcher_install.ahk"
 $url      = 'https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = '726eec5711e0637e2457e36ecbd7081f009a7a86e8fc78b7c15d455d686a4acc'
+$checksum = '3a4f033cf88ee894f6b4d5c0b079b669eaf9a55a04c4a18f76ce26ec9464cb7c'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
