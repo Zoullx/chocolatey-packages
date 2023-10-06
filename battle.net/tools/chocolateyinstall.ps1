@@ -1,8 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ahkExe       = 'AutoHotKey'
-$ahkFile      = "$toolsDir\battle.net_install.ahk"
-$url          = 'https://us.battle.net/download/getInstaller?os=win&installer=Battle.net-Setup.exe&id=undefined'
+$url          = 'https://downloader.battle.net/download/getInstallerForGame?os=win&gameProgram=BATTLENET_APP&version=Live'
 $fileLocation = Join-Path $toolsDir 'Battle.net-Setup.exe'
 $checksumType = 'sha256'
 
@@ -17,10 +15,9 @@ $packageArgs = @{
   softwareName  = 'Battle.net*'
   checksum      = $checksum
   checksumType  = $checksumType
-  silentArgs    = ""
+  silentArgs    = '--lang=enUS --installpath="C:\Program Files (x86)\Battle.net"'
   validExitCodes= @(0, 3010, 1641)
 }
 
-Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
-Start-WaitandStop "Battle.net"
+Start-WaitandStop "Battle.net*"
