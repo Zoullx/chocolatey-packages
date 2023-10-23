@@ -1,20 +1,19 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$installScript = Join-Path $toolsDir 'eve-online_install.qs'
+$url      = 'https://launcher.ccpgames.com/eve-online/release/win32/x64/eve-online-latest+Setup.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$url      = 'http://binaries.eveonline.com/EveLauncher-2294803.exe'
-$checksum = 'a3edcf102273eb6cda5de65d44687025880a788c47af6839081074eb380ac709'
+$checksum = '86652a481acfbed509ce24021f634031bfa9c860c80720b60685877b1b1effea'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $toolsDir
   fileType      = 'EXE'
   url           = $url
-  softwareName  = 'EVE Online*'
+  softwareName  = 'eve-online'
   checksum      = $checksum
   checksumType  = 'sha256'
-  silentArgs    = "--script $installScript"
+  silentArgs    = '/silent'
   validExitCodes= @(0, 3010, 1641)
 }
 

@@ -7,7 +7,15 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
-$downloadUrl = 'https://community.testeveonline.com/support/download/'
+$downloadUrl = 'https://www.eveonline.com/download'
+
+function Get-RemoteFileVersion( [string] $Url ) {
+  $fn = [System.IO.Path]::GetTempFileName()
+  Invoke-WebRequest $Url -Outfile $fn -UseBasicParsing
+  $res = (Get-ItemProperty $fn).VersionInfo.FileVersion
+  Remove-Item $fn -ea ignore
+  return $res
+}
 
 function global:au_BeforeUpdate {
   $Latest.Checksum32 = Get-RemoteChecksum -Url $Latest.Url32 -Algorithm 'SHA256'
@@ -16,25 +24,17 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^[$]url\s*=\s*)'.*'"        = "`${1}'$($Latest.URL32)'"
       "(?i)(^[$]checksum\s*=\s*)'.*'"   = "`${1}'$($Latest.Checksum32)'"
     }
   }
 }
 
 function global:au_GetLatest {
-  $download_page = Invoke-WebRequest $downloadUrl -UseBasicParsing
-  $url = ($download_page.links | Where-Object href -match "\.exe$" | Select-Object -First 1 -ExpandProperty href)
-  $url -match '.*-(?<Version>.*)\.exe'
-  $versionArr = $matches.Version.ToCharArray()
-  $major = $versionArr[0]
-  $minor = $versionArr[1]
-  $build = $versionArr[2]
-  $revision = [string]::Join("", $versionArr, 3, 4)
+  $version = Get-RemoteFileVersion -Url $downloadUrl
 
   return @{
-    Version = "$major.$minor.$build.$revision"
-    URL32   = $url
+    Version = $version
+    URL32   = $downloadUrl
   }
 }
 
