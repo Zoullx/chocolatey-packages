@@ -1,5 +1,9 @@
 ﻿![eve-online Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/eve-online.png "EVE Online Logo")
 
+# NOTE:
+
+CCP has updated their launcher and is deprecating their original launcher. This package has been updated to use their new launcher, but because of the differences in the versions of the original launcher and this new launcher, you may have to uninstall this package if it's already installed under one of those old versions and install one of the new versions for the package to upgrade properly again.
+
 # [EVE Online](https://community.chocolatey.org/packages/eve-online)
 
 # THE #1 SPACE MMO

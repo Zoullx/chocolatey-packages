@@ -52,6 +52,10 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>eve-online gaming launcher</tags>
     <summary>EVE Online: The #1 Space MMO, Your Galactic Adventure Awaits</summary>
     <description>
+# NOTE:
+
+CCP has updated their launcher and is deprecating their original launcher. This package has been updated to use their new launcher, but because of the differences in the versions of the original launcher and this new launcher, you may have to uninstall this package if it's already installed under one of those old versions and install one of the new versions for the package to upgrade properly again.
+
 # THE #1 SPACE MMO
 
 ## YOUR GALACTIC ADVENTURE AWAITS
