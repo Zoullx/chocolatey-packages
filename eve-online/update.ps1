@@ -7,7 +7,7 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
-$downloadUrl = 'https://www.eveonline.com/download'
+$downloadUrl = 'https://launcher.ccpgames.com/eve-online/release/win32/x64/eve-online-latest+Setup.exe'
 
 function Get-RemoteFileVersion( [string] $Url ) {
   $fn = [System.IO.Path]::GetTempFileName()
