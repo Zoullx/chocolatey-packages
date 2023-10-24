@@ -1,7 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ahkExe   = 'AutoHotKey'
-$ahkFile  = "$toolsDir\final-fantasy-xiv_install.ahk"
+# $ahkExe   = 'AutoHotKey'
+# $ahkFile  = "$toolsDir\final-fantasy-xiv_install.ahk"
+$7zip = Join-Path "$env:ChocolateyInstall" 'tools\7z.exe'
+$ffInstallUnzipFile = Join-Path $toolsDir 'ffxivsetup_ft.exe'
 $url      = 'https://etailers.square-enix-games.com/etailer/283335?e=Free%20Trial&p=Windows&s=Square%20Enix%20Store'
 $checksum = '6810954D1EAF0D0951BB5534D6369644405FBD784F7374F85627A53FA70FB0DF'
 
