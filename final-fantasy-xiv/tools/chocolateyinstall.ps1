@@ -8,47 +8,51 @@ $ffInstallParams = "x `"$ffInstallUnzipFile`" -t# -aoa -bd -bb1 -o`"$toolsDir`" 
 $url      = 'https://etailers.square-enix-games.com/etailer/283335?e=Free%20Trial&p=Windows&s=Square%20Enix%20Store'
 $checksum = '6810954D1EAF0D0951BB5534D6369644405FBD784F7374F85627A53FA70FB0DF'
 
-# Download EXE
-$webFileArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  url           = $url
-  file          = $ffInstallUnzipFile
-  checksum      = $checksum
-  checksumType  = 'sha256'
+if (-not Test-Path -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{2B41E132-07DF-4925-A3D3-F2D1765CCDFE}") {
+    # Download EXE
+    $webFileArgs = @{
+    packageName   = $env:ChocolateyPackageName
+    url           = $url
+    file          = $ffInstallUnzipFile
+    checksum      = $checksum
+    checksumType  = 'sha256'
+    }
+
+    Get-ChocolateyWebFile @webFileArgs
+
+    # Extract actual Installer from EXE
+    $ffInstallExtractProcess = New-Object System.Diagnostics.Process
+    $ffInstallExtractProcess.EnableRaisingEvents = $true
+
+    $ffInstallExtractProcess.StartInfo = New-Object System.Diagnostics.ProcessStartInfo($7zip, $ffInstallParams)
+    $ffInstallExtractProcess.StartInfo.RedirectStandardOutput = $true
+    $ffInstallExtractProcess.StartInfo.RedirectStandardError = $true
+    $ffInstallExtractProcess.StartInfo.UseShellExecute = $false
+    $ffInstallExtractProcess.StartInfo.WorkingDirectory = $workingDirectory
+    $ffInstallExtractProcess.StartInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
+    $ffInstallExtractProcess.StartInfo.CreateNoWindow = $true
+
+    $ffInstallExtractProcess.Start() | Out-Null
+    if ($ffInstallExtractProcess.StartInfo.RedirectStandardOutput) { $ffInstallExtractProcess.BeginOutputReadLine() }
+    if ($ffInstallExtractProcess.StartInfo.RedirectStandardError) { $ffInstallExtractProcess.BeginErrorReadLine() }
+    $ffInstallExtractProcess.WaitForExit()
+    $ffInstallExtractProcess.Dispose()
+
+    $ffInstallFileChecksum = '0C946D13BB96B32C684414F4B67050BAE9A235DDB1EFDB3955E16DFF34C7C91D'
+
+    $packageArgs = @{
+    packageName   = $env:ChocolateyPackageName
+    unzipLocation = $toolsDir
+    fileType      = 'EXE'
+    file          = $ffInstallFile
+    softwareName  = 'FINAL FANTASY XIV ONLINE*'
+    checksum      = $ffInstallFileChecksum
+    checksumType  = 'sha256'
+    silentArgs    = "-s -f1'$ffInstallScript' /L1033 /zonoa-vix --g_nLicense=1"
+    validExitCodes= @(0, 3010, 1641)
+    }
+
+    Install-ChocolateyPackage @packageArgs
+} else {
+    Write-Host "Final Fantasy XIV Online is already installed"
 }
-
-Get-ChocolateyWebFile @webFileArgs
-
-# Extract actual Installer from EXE
-$ffInstallExtractProcess = New-Object System.Diagnostics.Process
-$ffInstallExtractProcess.EnableRaisingEvents = $true
-
-$ffInstallExtractProcess.StartInfo = New-Object System.Diagnostics.ProcessStartInfo($7zip, $ffInstallParams)
-$ffInstallExtractProcess.StartInfo.RedirectStandardOutput = $true
-$ffInstallExtractProcess.StartInfo.RedirectStandardError = $true
-$ffInstallExtractProcess.StartInfo.UseShellExecute = $false
-$ffInstallExtractProcess.StartInfo.WorkingDirectory = $workingDirectory
-$ffInstallExtractProcess.StartInfo.WindowStyle = [System.Diagnostics.ProcessWindowStyle]::Hidden
-$ffInstallExtractProcess.StartInfo.CreateNoWindow = $true
-
-$ffInstallExtractProcess.Start() | Out-Null
-if ($ffInstallExtractProcess.StartInfo.RedirectStandardOutput) { $ffInstallExtractProcess.BeginOutputReadLine() }
-if ($ffInstallExtractProcess.StartInfo.RedirectStandardError) { $ffInstallExtractProcess.BeginErrorReadLine() }
-$ffInstallExtractProcess.WaitForExit()
-$ffInstallExtractProcess.Dispose()
-
-$ffInstallFileChecksum = '0C946D13BB96B32C684414F4B67050BAE9A235DDB1EFDB3955E16DFF34C7C91D'
-
-$packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE'
-  file          = $ffInstallFile
-  softwareName  = 'FINAL FANTASY XIV ONLINE*'
-  checksum      = $ffInstallFileChecksum
-  checksumType  = 'sha256'
-  silentArgs    = "-s -f1'$ffInstallScript' /L1033 /zonoa-vix --g_nLicense=1"
-  validExitCodes= @(0, 3010, 1641)
-}
-
-Install-ChocolateyPackage @packageArgs
