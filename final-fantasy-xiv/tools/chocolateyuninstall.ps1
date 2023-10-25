@@ -7,7 +7,7 @@ $ffStartMenuRunShortcutFolder = Join-Path $env:ProgramData "Microsoft\Windows\St
 
 Remove-Item $ffInstallDir -Recurse -Force
 Remove-Item $ffInstallShieldDir -Recurse -Force
-if (-not Test-Path -Path "$installShieldDir\*") {
+if (-not (Test-Path -Path "$installShieldDir\*")) {
     Remove-Item $installShieldDir -Force
 }
 Remove-Item $ffStartMenuRunShortcutFolder -Recurse -Force
