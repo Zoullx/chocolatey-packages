@@ -1,7 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-# $ahkExe   = 'AutoHotKey'
-# $ahkFile  = "$toolsDir\final-fantasy-xiv_install.ahk"
 $7zip = Join-Path "$env:ChocolateyInstall" 'tools\7z.exe'
 $ffInstallFile = Join-Path $toolsDir '2.Setup.exe'
 $ffInstallScript = Join-Path $toolsDir 'Setup.iss'
@@ -49,9 +47,8 @@ $packageArgs = @{
   softwareName  = 'FINAL FANTASY XIV ONLINE*'
   checksum      = $ffInstallFileChecksum
   checksumType  = 'sha256'
-  silentArgs    = "-s -f1'$ffInstallScript'"
+  silentArgs    = "-s -f1'$ffInstallScript' /L1033 /zonoa-vix --g_nLicense=1"
   validExitCodes= @(0, 3010, 1641)
 }
 
-# Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
