@@ -20,7 +20,14 @@ $installed = Test-Path -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\Curre
 $fileName = (Get-ChildItem $toolsDir -Filter *.exe | Select-Object -First 1).Name
 $fileLocation = Join-Path $toolsDir $fileName
 if ($installed) {
-  $silentScript = Join-Path $toolsDir 'reinstall.iss'
+  $packageMajor, $packageMinor, $packageBuild, $packageRevision = $env:ChocolateyPackageVersion -Split "\."
+  $installedMajor = (Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E5C1B339-0E4E-49A5-859E-5E1DE1938706}" -Name VersionMajor).VersionMajor
+  $installedMinor = (Get-ItemProperty -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{E5C1B339-0E4E-49A5-859E-5E1DE1938706}" -Name VersionMinor).VersionMinor
+  if ("$packageMajor.$packageMinor" -ne "$installedMajor.$installedMinor") {
+    $silentScript = Join-Path $toolsDir 'upgrade.iss'
+  } else {
+    $silentScript = Join-Path $toolsDir 'reinstall.iss'
+  }
 } else {
   $silentScript = Join-Path $toolsDir 'install.iss'
 }
