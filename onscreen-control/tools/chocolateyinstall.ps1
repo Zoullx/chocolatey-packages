@@ -2,8 +2,8 @@
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $checksumType = 'sha256'
 
-$url      = 'https://lmu.lge.com/ExternalService/onscreencontrol/win/2.0/OnScreenControl_7.95.zip'
-$checksum = '4D5DF2C0399879B53DBC36CA958A9DCCFE6CF327A6B096EA9FC04EE90FFA3D45'
+$url      = 'https://lmu.lge.com/ExternalService/onscreencontrol/win/2.0/OnScreenControl_8.04.zip'
+$checksum = '512E331944353BE59DF0C41D65D41F11968504C82BDE63EE8F10AF0C06393DF4'
 
 $zipPackageArgs = @{
   packageName   = $env:ChocolateyPackageName
