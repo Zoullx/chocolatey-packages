@@ -23,7 +23,7 @@ If WinExist(winTitle)
     WinActivate
 }
 
-okText:="|<>*120$34.3z0A0kDw0k33kw30wD3kA3nk3kkwD0D33kk0AAw300knkA033z0k0ADw300kwkA033n0k0AAD300kkwD0D30kw0wA30wD0k33kw30A3z0A0wDw0k3s"
+okText:="|<>*118$17.D24n4P39Y2K84wE9cUGNVYFa8FsEs"
 
 ; Choose install location
 ; C:\Program Files (x86)\Guild Wars (Default)
