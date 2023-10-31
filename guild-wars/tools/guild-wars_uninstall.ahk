@@ -23,7 +23,7 @@ If WinExist(winTitle)
 uninstallText:="|<>*98$66.UA03000000nUA03000000nUA00000600nUA00000600nUArXBsTDXsnUAznDwzjjwnUAsnCAlaAAnUAknAAs63wnUAknAAT6DwnkAknAA1aAAnkMknAAlaAAnzsknAAzbjwnDUknAAT3bgnU"
 
 ; Uninstall Guild Wars
-If (uninstallOk:=FindText("wait", -1,,,,,,, uninstallText))
+If (FindText("wait", -1,,,,,,, uninstallText))
 {
     Sleep, 1000
     Send {Tab} ; Switch from Reinstall to Uninstall

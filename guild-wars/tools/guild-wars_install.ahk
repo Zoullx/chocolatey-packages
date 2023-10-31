@@ -27,7 +27,7 @@ okText:="|<>*118$17.D24n4P39Y2K84wE9cUGNVYFa8FsEs"
 
 ; Choose install location
 ; C:\Program Files (x86)\Guild Wars (Default)
-If (okOk:=FindText("wait", -1,,,,,,, okText))
+If (FindText("wait", -1,,,,,,, okText))
 {
     Sleep, 1000
     Send {Enter} ; OK
