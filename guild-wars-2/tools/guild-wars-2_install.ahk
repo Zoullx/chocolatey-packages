@@ -19,12 +19,8 @@ winTitle = ahk_class ArenaNet ahk_exe Gw2.exe
 
 ; Loading Installer
 ; Wait until the Guild Wars 2 Installer is found
-; Activate to make sure that it's on top when the actual installer opens
 WinWait, %winTitle%
-If WinExist(winTitle)
-{
-    WinActivate
-}
+FindText().BindWindow(WinExist(winTitle)) ; Bind FindText to Guild Wars 2 Installer
 
 installText:="|<>*196$64.0712U1ns7UySTMmNb7tz7tsxbfbMTbwzbdqDyTVyTnySXQTtyntzjtvBsTbnDbyzbiLsyTQyTvySwPlts1tzjtvlbbbjbbqybjaAyQzCSvk0TO7UVs0208"
 
@@ -32,15 +28,15 @@ installText:="|<>*196$64.0712U1ns7UySTMmNb7tz7tsxbfbMTbwzbdqDyTVyTnySXQTtyntzjtv
 If (FindText("wait", -1,,,,,,, installText))
 {
     Sleep, 1000
-    Send {Tab}
-    Send {Tab}
-    Send {Tab}
-    Send {Tab}
-    Send {Tab}
-    Send {Tab}
-    Send {Tab}
-    Send {Tab}
-    Send {Enter} ; Install
+    ControlSend,, {Tab}
+    ControlSend,, {Tab}
+    ControlSend,, {Tab}
+    ControlSend,, {Tab}
+    ControlSend,, {Tab}
+    ControlSend,, {Tab}
+    ControlSend,, {Tab}
+    ControlSend,, {Tab}
+    ControlSend,, {Enter} ; Install
 }
 
 ; Choose install location window has a different title
@@ -52,17 +48,19 @@ WinWait, %winTitle%
 If WinExist(winTitle)
 {
     ; Proceed with defaults
-    WinActivate
     Sleep, 1000
     ; Hitting Enter on the Install button causes the installation folder to appear twice
     ; Cancel out of the first one to avoid an error if both get accepted
-    Send {Esc}
+    ControlSend,, {Esc}
     Sleep, 1000
-    Send {Enter} ; OK
+    ControlSend,, {Enter} ; OK
 }
 
 ; Launcher windows have a different title
 winTitle = ahk_class ArenaNet ahk_exe Gw2-64.exe
+
+WinWait, %winTitle%
+FindText().BindWindow(WinExist(winTitle)) ; Bind FindText to Guild Wars 2 Launcher
 
 loginText:="|<>*141$61.0zkDw5y07UFzllssznVwwzlwsyTtsySTtzAzjwwDDDszaTzySXbbwTmDUzDMnnyDt7tzbi9tz7wnwznrUwynyNyTtvsSTMyQTDwxyCDCCT7byST60DkTs7w07nU"
 
@@ -71,10 +69,9 @@ loginText:="|<>*141$61.0zkDw5y07UFzllssznVwwzlwsyTtsySTtzAzjwwDDDszaTzySXbbwTmDU
 If (FindText("wait", -1,,,,,,, loginText))
 {
     Sleep, 1000
-    If WinExist(winTitle)
-    {
-        WinClose
-    }
+    WinClose
 }
+
+FindText().BindWindow(0) ; Unbind FindText to Guild Wars 2 Launcher
 
 ExitApp
