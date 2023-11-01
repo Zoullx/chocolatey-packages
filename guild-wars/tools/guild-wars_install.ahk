@@ -16,12 +16,8 @@ winTitle = ahk_class ArenaNet_Dialog_Class ahk_exe GwSetup.exe
 
 ; Loading Installer
 ; Wait until the Guild Wars Installer is found
-; Activate to make sure that it's on top when the actual installer opens
 WinWait, %winTitle%
-If WinExist(winTitle)
-{
-    WinActivate
-}
+FindText().BindWindow(WinExist(winTitle)) ; Bind FindText to Guild Wars Installer
 
 okText:="|<>*118$17.D24n4P39Y2K84wE9cUGNVYFa8FsEs"
 
@@ -30,7 +26,7 @@ okText:="|<>*118$17.D24n4P39Y2K84wE9cUGNVYFa8FsEs"
 If (FindText("wait", -1,,,,,,, okText))
 {
     Sleep, 1000
-    Send {Enter} ; OK
+    ControlSend,, {Enter}, winTitle ; OK
 }
 
 ; Download windows have the same title as above
@@ -46,5 +42,7 @@ If WinExist(winTitle)
     WinClose
     FileCreateShortcut, %programFilesx86%\Guild Wars\Gw.exe, %programData%\Microsoft\Windows\Start Menu\Programs\Guild Wars\Guild Wars.lnk
 }
+
+FindText().BindWindow(0) ; Unbind FindText to Guild Wars Installer
 
 ExitApp

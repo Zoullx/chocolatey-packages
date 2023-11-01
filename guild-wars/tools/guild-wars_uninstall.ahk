@@ -13,12 +13,8 @@ winTitle = ahk_class ArenaNet_Dialog_Class ahk_exe Gw.exe
 
 ; Loading Uninstaller
 ; Wait until the Guild Wars Uninstaller is found
-; Activate to make sure that it's on top when the actual uninstaller opens
 WinWait, %winTitle%
-If WinExist(winTitle)
-{
-    WinActivate
-}
+FindText().BindWindow(WinExist(winTitle)) ; Bind FindText to Guild Wars Uninstaller
 
 uninstallText:="|<>*98$66.UA03000000nUA03000000nUA00000600nUA00000600nUArXBsTDXsnUAznDwzjjwnUAsnCAlaAAnUAknAAs63wnUAknAAT6DwnkAknAA1aAAnkMknAAlaAAnzsknAAzbjwnDUknAAT3bgnU"
 
@@ -26,8 +22,8 @@ uninstallText:="|<>*98$66.UA03000000nUA03000000nUA00000600nUA00000600nUArXBsTDXs
 If (FindText("wait", -1,,,,,,, uninstallText))
 {
     Sleep, 1000
-    Send {Tab} ; Switch from Reinstall to Uninstall
-    Send {Enter} ; Uninstall
+    ControlSend,, {Tab} ; Switch from Reinstall to Uninstall
+    ControlSend,, {Enter} ; Uninstall
 }
 
 ; Window title changes for the confirmation window
@@ -39,7 +35,9 @@ WinWait, %winTitle%
 If WinExist(winTitle)
 {
     Sleep, 1000
-    Send {Enter} ; OK
+    ControlSend,, {Enter} ; OK
 }
+
+FindText().BindWindow(0) ; Unbind FindText to Guild Wars Uninstaller
 
 ExitApp
