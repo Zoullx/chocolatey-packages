@@ -26,7 +26,7 @@ okText:="|<>*118$17.D24n4P39Y2K84wE9cUGNVYFa8FsEs"
 If (FindText("wait", -1,,,,,,, okText))
 {
     Sleep, 1000
-    ControlSend,, {Enter}, winTitle ; OK
+    ControlSend,, {Enter} ; OK
 }
 
 ; Download windows have the same title as above
