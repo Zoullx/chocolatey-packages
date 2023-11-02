@@ -25,13 +25,17 @@ If (FindText("wait", -1,,,,,,, areYouSureText))
     ControlSend,, {Enter} ; Yes
 }
 
+; Wait for the new window with the same name to show back up
+WinWait, %winTitle%
+FindText().BindWindow(WinExist(winTitle)) ; Rebind FindText to Guild Wars 2 Uninstaller
+
 uninstallSuccessfulText:="|<>*146$99.V0400U2E00000070A800040G0000000U1VDYyBvmEAWCQsliFA9YaG42G24H698EW9V8YWMVmEMWEVtX4FA94YEYGG0YG4824W9l8YW4WGE4WMlUEYF/l4YHbSG3XlnbCQVtU"
 
 ; Are you sure you want to uninstall
 If (FindText("wait", -1,,,,,,, uninstallSuccessfulText))
 {
     Sleep, 1000
-    ControlSend {Enter} ; OK
+    ControlSend,, {Enter} ; OK
 }
 
 FindText().BindWindow(0) ; Bind FindText to Guild Wars 2 Uninstaller

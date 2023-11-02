@@ -20,7 +20,10 @@ winTitle = ahk_class ArenaNet ahk_exe Gw2.exe
 ; Loading Installer
 ; Wait until the Guild Wars 2 Installer is found
 WinWait, %winTitle%
-FindText().BindWindow(WinExist(winTitle)) ; Bind FindText to Guild Wars 2 Installer
+If WinExist(winTitle)
+{
+    WinActivate
+}
 
 installText:="|<>*196$64.0712U1ns7UySTMmNb7tz7tsxbfbMTbwzbdqDyTVyTnySXQTtyntzjtvBsTbnDbyzbiLsyTQyTvySwPlts1tzjtvlbbbjbbqybjaAyQzCSvk0TO7UVs0208"
 
@@ -28,15 +31,15 @@ installText:="|<>*196$64.0712U1ns7UySTMmNb7tz7tsxbfbMTbwzbdqDyTVyTnySXQTtyntzjtv
 If (FindText("wait", -1,,,,,,, installText))
 {
     Sleep, 1000
-    ControlSend,, {Tab}
-    ControlSend,, {Tab}
-    ControlSend,, {Tab}
-    ControlSend,, {Tab}
-    ControlSend,, {Tab}
-    ControlSend,, {Tab}
-    ControlSend,, {Tab}
-    ControlSend,, {Tab}
-    ControlSend,, {Enter} ; Install
+    Send {Tab}
+    Send {Tab}
+    Send {Tab}
+    Send {Tab}
+    Send {Tab}
+    Send {Tab}
+    Send {Tab}
+    Send {Tab}
+    Send {Enter} ; Install
 }
 
 ; Choose install location window has a different title
@@ -48,19 +51,23 @@ WinWait, %winTitle%
 If WinExist(winTitle)
 {
     ; Proceed with defaults
+    WinActivate
     Sleep, 1000
     ; Hitting Enter on the Install button causes the installation folder to appear twice
     ; Cancel out of the first one to avoid an error if both get accepted
-    ControlSend,, {Esc}
+    Send {Esc}
     Sleep, 1000
-    ControlSend,, {Enter} ; OK
+    Send {Enter} ; OK
 }
 
 ; Launcher windows have a different title
 winTitle = ahk_class ArenaNet ahk_exe Gw2-64.exe
 
 WinWait, %winTitle%
-FindText().BindWindow(WinExist(winTitle)) ; Bind FindText to Guild Wars 2 Launcher
+If WinExist(winTitle)
+{
+    WinActivate
+}
 
 loginText:="|<>*141$61.0zkDw5y07UFzllssznVwwzlwsyTtsySTtzAzjwwDDDszaTzySXbbwTmDUzDMnnyDt7tzbi9tz7wnwznrUwynyNyTtvsSTMyQTDwxyCDCCT7byST60DkTs7w07nU"
 
@@ -71,7 +78,5 @@ If (FindText("wait", -1,,,,,,, loginText))
     Sleep, 1000
     WinClose
 }
-
-FindText().BindWindow(0) ; Unbind FindText to Guild Wars 2 Launcher
 
 ExitApp
