@@ -19,6 +19,10 @@ function Get-RemoteFileVersion( [string] $Url ) {
   return $res
 }
 
+function global:au_SearchReplace {
+  # we don't actually have anything to replace, but we need this here to not throw an error
+}
+
 function global:au_GetLatest {
   $version = Get-RemoteFileVersion -Url $downloadUrl
 
