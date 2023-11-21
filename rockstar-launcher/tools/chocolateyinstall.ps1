@@ -16,7 +16,7 @@ $rstarRunTarget = Join-Path $rstarInstallDir "LauncherPatcher.exe"
 $url = 'https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = 'FDB5EBDDEB82EE31906EDCB0B63A52249AE43A36679DA966DFC5936CAB56ECA1'
+$checksum = '1af66f2470d9d56b19526cf958132eb00ad3de743e7b8a648fce05ac803548c3'
 
 # Download EXE
 $webFileArgs = @{

@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$url        = 'https://cdn.legacygames.com/LegacyGamesLauncher/legacy-games-launcher-setup-1.10.0-ia32-full.exe'
-$url64      = 'https://cdn.legacygames.com/LegacyGamesLauncher/legacy-games-launcher-setup-1.10.0-x64-full.exe'
-$checksum   = '47D86F0F1A335DED22CF43BF9D723EE537A11A5A88B49046142F46A13F47EC0D'
-$checksum64 = 'FE48ED35FE4A8BF6CEB9B209283ED692C19C0B5AF09E467011C45CC5DFE86B37'
+$url        = 'https://cdn.legacygames.com/LegacyGamesLauncher/legacy-games-launcher-setup-1.12.0-ia32-full.exe'
+$url64      = 'https://cdn.legacygames.com/LegacyGamesLauncher/legacy-games-launcher-setup-1.12.0-x64-full.exe'
+$checksum   = '33697f9bd5f1349c92f17d3f4dd5533f523e8825fefc111540f81eb03787fc8d'
+$checksum64 = 'd24e6caaae9c2f77fdf8966837b4e1dea606dff0f0b793b1341cce96c96ce97d'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
