@@ -3,7 +3,7 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url      = 'https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = '3d9790282325ba59a8ca56f56c2ff304788b37d232015a61b7a2673da9e13f26'
+$checksum = 'c5263c3f88896d760d29f151fa4746aff931b686e99150057d0bef9fb0e9c4c1'
 
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
