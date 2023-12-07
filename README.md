@@ -7,11 +7,10 @@ All of the packages that I maintain on [Chocolatey](https://chocolatey.org):
 - [Final Fantasy XIV](https://community.chocolatey.org/packages/final-fantasy-xiv)
 - [Glyph Launcher](https://community.chocolatey.org/packages/glyph-launcher)
 - [GoXLR](https://community.chocolatey.org/packages/goxlr)
-- [GoXLR Driver](https://community.chocolatey.org/packages/goxlr-driver) [Deprecated]
 - [Guild Wars](https://community.chocolatey.org/packages/guild-wars)
 - [Guild Wars 2](https://community.chocolatey.org/packages/guild-wars-2)
-- [Humble App](https://community.chocolatey.org/packages/humble-app)
 - [League of Legends](https://community.chocolatey.org/packages/leagueoflegends)
+- [Legacy Games Launcher](https://community.chocolatey.org/packages/legacy-games-launcher)
 - [LG UltraGear Control Center](https://community.chocolatey.org/packages/lg-ultragear-control-center)
 - [OnScreen Control](https://community.chocolatey.org/packages/onscreen-control)
 - [Razer Synapse 2](https://community.chocolatey.org/packages/razer-synapse-2)
@@ -22,3 +21,8 @@ All of the packages that I maintain on [Chocolatey](https://chocolatey.org):
 Packages that I maintain internally
 
 - Battle.net
+
+Deprecated
+
+- [GoXLR Driver](https://community.chocolatey.org/packages/goxlr-driver)
+- [Humble App](https://community.chocolatey.org/packages/humble-app)
