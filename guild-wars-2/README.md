@@ -2,10 +2,22 @@
 
 # [Guild Wars 2](https://community.chocolatey.org/packages/guild-wars-2)
 
-# UPDATE WITH GUILD WARS 2 INFO
+# The World Is Yours
 
-# BECOME A LEGEND
+**Guild Wars 2** is an online role-playing game with fast-paced action combat, a rich and detailed universe of stories, awe-inspiring landscapes to explore, two challenging player vs. player modes—and no subscription fees!
 
-In a world torn by conflict, where human kingdoms are all but destroyed and guilds sacrifice all for a chance to control the Hall of Heroes, a champion must rise from the ruins of a once-proud land to lead refugees from the ashes and fulfill an ancient prophecy. Will that hero be you?
+## Explore a Living World
 
-Experience the game that has captivated millions of gamers worldwide. Guild Wars® is an online roleplaying game that rewards player skill and innovative gameplay. It's the original smash hit release from developer ArenaNet®, the beginnings of a franchise played by almost four million gamers worldwide.
+Tyria comes alive with thousands of stories that change based on the actions of players like you. You never know what you'll discover each time you play!
+
+## Action-Oriented Combat
+
+Experience high-impact, fast-paced combat and choose from an arsenal of professions, weapons, and playstyles. Attack on the move, dodge and roll away from enemy blows, and come to your allies' rescue midbattle. In the open world, you can team up with every player you meet—no grouping required!
+
+## It's Your Story
+
+Tyria is irrevocably shaped by its past, and you play a crucial role in its future. Create a unique character, decide how their story evolves, and uncover new revelations, questions, and truths with every choice you make.
+
+## Competitive Play for Everyone
+
+Competitive play in **Guild Wars 2** is easy to learn but offers challenges for new players and hardcore PvPers alike. Whether you decide to jump into quick, furious matches between small groups of players in organized PvP or join hundreds of other players in the grand battles of World vs. World, PvP is where you'll find the ultimate challenge!
