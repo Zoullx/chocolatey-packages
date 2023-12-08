@@ -1,4 +1,4 @@
-﻿![legacy-games-launcher Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/legacy-games-launcher.png "Legacy Games Launcher Logo")
+﻿![legacy-games-launcher Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/legacy-games-launcher/legacy-games-launcher.png "Legacy Games Launcher Logo")
 
 # [Legacy Games Launcher](https://community.chocolatey.org/packages/legacy-games-launcher)
 

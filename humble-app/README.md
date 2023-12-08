@@ -1,4 +1,4 @@
-﻿![humble-app Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/humble-app.png "Humble App Logo")
+﻿![humble-app Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/humble-app/humble-app.png "Humble App Logo")
 
 # [Humble App](https://community.chocolatey.org/packages/humble-app)
 

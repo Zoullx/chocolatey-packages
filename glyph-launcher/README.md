@@ -1,4 +1,4 @@
-﻿![glyph Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/glyph.png "Glyph Logo")
+﻿![glyph Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/glyph-launcher/glyph.png "Glyph Logo")
 
 # [Glyph](https://community.chocolatey.org/packages/glyph-launcher)
 

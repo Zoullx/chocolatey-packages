@@ -1,4 +1,4 @@
-![goxlr Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/goxlr.png "GoXLR Logo")
+![goxlr Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/goxlr-internal/goxlr.png "GoXLR Logo")
 
 # [GoXLR](https://community.chocolatey.org/packages/goxlr)
 

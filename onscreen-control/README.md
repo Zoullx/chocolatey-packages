@@ -1,4 +1,4 @@
-﻿![onscreen-control Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/onscreen-control.png "OnScreen Control Logo")
+﻿![onscreen-control Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/onscreen-control/onscreen-control.png "OnScreen Control Logo")
 
 # [OnScreen Control](https://community.chocolatey.org/packages/onscreen-control)
 

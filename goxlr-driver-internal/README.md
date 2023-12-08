@@ -1,4 +1,4 @@
-![goxlr-driver Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/goxlr-driver.png "GoXLR Driver Logo")
+![goxlr-driver Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/goxlr-driver-internal/goxlr-driver.png "GoXLR Driver Logo")
 
 # [GoXLR Driver](https://community.chocolatey.org/packages/goxlr-driver)
 

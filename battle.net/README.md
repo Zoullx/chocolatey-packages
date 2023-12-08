@@ -1,4 +1,4 @@
-![battle.net Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/battlenet.png "Battle.net Logo")
+![battle.net Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/battle.net/battlenet.png "Battle.net Logo")
 
 # Battle.net (Internal)
 

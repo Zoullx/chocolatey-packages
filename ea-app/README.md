@@ -1,4 +1,4 @@
-﻿![ea-app Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/ea-app.png "EA App Logo")
+﻿![ea-app Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/ea-app/ea-app.png "EA App Logo")
 
 # [EA App](https://community.chocolatey.org/packages/ea-app)
 

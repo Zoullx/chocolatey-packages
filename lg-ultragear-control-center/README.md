@@ -1,4 +1,4 @@
-﻿![lg-ultragear-control-center Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/lg-ultragear-control-center.png "LG UltraGear Control Center Logo")
+﻿![lg-ultragear-control-center Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/lg-ultragear-control-center/lg-ultragear-control-center.png "LG UltraGear Control Center Logo")
 
 # [LG UltraGear Control Center](https://community.chocolatey.org/packages/lg-ultragear-control-center)
 

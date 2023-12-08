@@ -1,4 +1,4 @@
-﻿![guild-wars Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/guild-wars.png "Guild Wars Logo")
+﻿![guild-wars Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/guild-wars/guild-wars.png "Guild Wars Logo")
 
 # [Guild Wars](https://community.chocolatey.org/packages/guild-wars)
 

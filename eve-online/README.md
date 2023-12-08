@@ -1,4 +1,4 @@
-﻿![eve-online Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/eve-online.png "EVE Online Logo")
+﻿![eve-online Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/eve-online/eve-online.png "EVE Online Logo")
 
 # NOTE:
 

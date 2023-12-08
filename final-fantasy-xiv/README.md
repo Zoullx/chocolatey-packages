@@ -1,4 +1,4 @@
-![final-fantasy-xiv Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/final-fantasy-xiv.png "Final Fantasy XIV Logo")
+![final-fantasy-xiv Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/final-fantasy-xiv/final-fantasy-xiv.png "Final Fantasy XIV Logo")
 
 # [Final Fantasy XIV Online](https://community.chocolatey.org/packages/final-fantasy-xiv)
 

@@ -1,4 +1,4 @@
-![leagueoflegends Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/icons/leagueoflegends.png "League of Legends Logo")
+![leagueoflegends Logo](https://raw.githubusercontent.com/Zoullx/chocolatey-packages/master/leagueoflegends/leagueoflegends.png "League of Legends Logo")
 
 # League of Legends (Internal)
 
