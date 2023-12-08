@@ -40,7 +40,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <projectUrl>https://www.finalfantasyxiv.com/</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/icons/final-fantasy-xiv.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/final-fantasy-xiv/final-fantasy-xiv.png</iconUrl>
     <copyright>© 2010-2022 Square Enix Co, Ltd.</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl> -->

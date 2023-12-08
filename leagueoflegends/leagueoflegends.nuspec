@@ -40,7 +40,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <projectUrl>https://leagueoflegends.com</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/icons/leagueoflegends.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/leagueoflegends/leagueoflegends.png</iconUrl>
     <copyright>© 2022 Riot Games, Inc.</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://na.leagueoflegends.com/en/legal/termsofuse</licenseUrl>

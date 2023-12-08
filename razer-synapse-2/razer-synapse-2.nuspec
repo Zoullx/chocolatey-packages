@@ -40,7 +40,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <projectUrl>https://www.razer.com/synapse-2</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/icons/razer-synapse-2.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/razer-synapse-2/razer-synapse-2.png</iconUrl>
     <copyright>© Razer Inc.</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://assets.razerzone.com/downloads/software/RazerEndUserLicenseAgreement.pdf</licenseUrl>
