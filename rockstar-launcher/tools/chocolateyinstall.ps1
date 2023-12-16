@@ -18,6 +18,11 @@ $url = 'https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
 $checksum = '141ff9af883a01e924a49bc4a21e2f05cfacebb5980880b4a53d7cb332986601'
 
+# Stop Rockstar Services
+Stop-Process -Name Launcher -Force -ErrorAction SilentlyContinue
+Stop-Process -Name RockstarService -Force -ErrorAction SilentlyContinue
+Stop-Process -Name SocialClubHelper -Force -ErrorAction SilentlyContinue
+
 # Download EXE
 $webFileArgs = @{
   packageName  = $env:ChocolateyPackageName
@@ -61,28 +66,34 @@ New-Item "$rstarInstallDir\ThirdParty\Steam" -ItemType Directory -Force
 Copy-Item "$rstarInstallUnzipFileDir\249.exe" "$rstarInstallDir\Redistributables\VCRed\vc_redist.x64.exe" -Force
 Copy-Item "$rstarInstallUnzipFileDir\252.exe" "$rstarInstallDir\Redistributables\VCRed\vc_redist.x86.exe" -Force
 
-# Install VC++ Redistributables
-$vc64InstallPackageArgs = @{
-  packageName    = $env:ChocolateyPackageName
-  fileType       = 'EXE'
-  file           = "$rstarInstallDir\Redistributables\VCRed\vc_redist.x64.exe"
-  silentArgs     = "/install /quiet /norestart"
-  validExitCodes = @(0, 3010, 1641, 1638)
-  softwareName   = 'Visual C++ Redistributable x64*'
+# check if newer VC++ Redistributables are already installed
+$keys = Get-UninstallRegistryKey -SoftwareName '*Visual C++*Redistributable*'
+$vcAlreadyInstalled = $keys | Where-Object { [version]($_.DisplayVersion) -gt [version]'14.36.32532.0' }
+
+if (-not $vcAlreadyInstalled) {
+  # Install VC++ Redistributables
+  $vc64InstallPackageArgs = @{
+    packageName    = $env:ChocolateyPackageName
+    fileType       = 'EXE'
+    file           = "$rstarInstallDir\Redistributables\VCRed\vc_redist.x64.exe"
+    silentArgs     = "/install /quiet /norestart"
+    validExitCodes = @(0, 3010, 1641, 1638)
+    softwareName   = 'Visual C++ Redistributable x64*'
+  }
+
+  Install-ChocolateyInstallPackage @vc64InstallPackageArgs
+
+  $vc86InstallPackageArgs = @{
+    packageName    = $env:ChocolateyPackageName
+    fileType       = 'EXE'
+    file           = "$rstarInstallDir\Redistributables\VCRed\vc_redist.x86.exe"
+    silentArgs     = "/install /quiet /norestart"
+    validExitCodes = @(0, 3010, 1641, 1638)
+    softwareName   = 'Visual C++ Redistributable x86*'
+  }
+
+  Install-ChocolateyInstallPackage @vc86InstallPackageArgs
 }
-
-Install-ChocolateyInstallPackage @vc64InstallPackageArgs
-
-$vc86InstallPackageArgs = @{
-  packageName    = $env:ChocolateyPackageName
-  fileType       = 'EXE'
-  file           = "$rstarInstallDir\Redistributables\VCRed\vc_redist.x86.exe"
-  silentArgs     = "/install /quiet /norestart"
-  validExitCodes = @(0, 3010, 1641, 1638)
-  softwareName   = 'Visual C++ Redistributable x86*'
-}
-
-Install-ChocolateyInstallPackage @vc86InstallPackageArgs
 
 # Copy Steam DLL
 Copy-Item "$rstarInstallUnzipFileDir\255.steam_api.dll" "$rstarInstallDir\ThirdParty\Steam\steam_api64.dll" -Force
