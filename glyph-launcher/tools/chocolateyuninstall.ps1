@@ -1,5 +1,4 @@
 ﻿$ErrorActionPreference = 'Stop';
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $glyphInstallDir = Join-Path ${env:ProgramFiles(x86)} "Glyph"
 $glyphProgramDataConfig = Join-Path $env:ProgramData "Glyph\GlyphLibrary.cfg"
 $glyphStartMenuRunShortcutFolder = Join-Path $env:ProgramData "Microsoft\Windows\Start Menu\Programs\Glyph"
