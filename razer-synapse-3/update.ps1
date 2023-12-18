@@ -9,10 +9,13 @@ $ErrorActionPreference = 'Stop'
 
 $razerSynapseUrl = 'http://rzr.to/synapse-3-pc-download'
 
+function global:au_SearchReplace {}
+
 function global:au_GetLatest {
   $response = try {
     Invoke-WebRequest -Uri $razerSynapseUrl -UseBasicParsing
-  } catch {
+  }
+  catch {
     $_.Exception.Response
   }
   if ($response.StatusCode -ne 200) {
