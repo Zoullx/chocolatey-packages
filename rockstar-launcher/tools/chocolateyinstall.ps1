@@ -16,7 +16,7 @@ $rstarRunTarget = Join-Path $rstarInstallDir "LauncherPatcher.exe"
 $url = 'https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = '141ff9af883a01e924a49bc4a21e2f05cfacebb5980880b4a53d7cb332986601'
+$checksum = 'b320266fcea3ff89bd1801c235884da5c202f490b11646717a2a536f229ec75e'
 
 # Stop Rockstar Services
 Stop-Process -Name Launcher -Force -ErrorAction SilentlyContinue
