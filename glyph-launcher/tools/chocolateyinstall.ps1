@@ -18,7 +18,7 @@ $glyphUninstallTarget = Join-Path $glyphInstallDir "glyphuninstall.exe"
 $url = 'https://glyph.dyn.triongames.com/glyph/live/GlyphInstall.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = 'a7e78359e26aa14ec8c95d9ea7a6d495abd4f8480e5b875fd39d37f2664098be'
+$checksum = '024211d0d70d9382f2d56cf0e5de1e3b662436076c0da885db8451d0e15be897'
 
 # Download EXE
 $webFileArgs = @{
