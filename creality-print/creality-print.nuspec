@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://docs.chocolatey.org/en-us/create/create-packages -->
+<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://community.chocolatey.org/packages). -->
+
+<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
+
+<!--
+This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
+
+* the package xmlns schema url may cause issues with nuget.exe
+* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
+* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
+-->
+
+<!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
+<!-- * If you are an organization making private packages, you probably have no issues here -->
+<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <!-- This section is about this package, although id and version have ties back to the software -->
+    <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
+    <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
+    <id>creality-print</id>
+    <!-- version should MATCH as closely as possible with the underlying software -->
+    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
+    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
+    <version>5.0.0.8636</version>
+    <packageSourceUrl>https://github.com/Zoullx/chocolatey-packages/tree/master/creality-print</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>Zoull</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>Creality Print</title>
+    <authors>Creality</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://www.creality.com/pages/creality-print-software</projectUrl>
+    <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
+    <!-- Here is an example using Githack -->
+    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/creality-print/creality-print.png</iconUrl>
+    <copyright>© 2023 Shenzhen Creality 3D Technology Co., Ltd.</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>creality-print 3D printer FDM slicing</tags>
+    <summary>Versatile Copilot for FDM Printers</summary>
+    <description>
+Versatile Copilot for FDM Printers
+Cloud Model Library
+Streamlined Workflow
+Data Secure LAN Printing
+Refined for Print Quality
+More Than Just a Slicer
+3-stage Workflow, Simple to Follow
+Prepare
+Import and adjust the model. Apply printer filament, and quality presets.
+Preview
+Enjoy one-click slicing and extensive slice preview options.
+Device
+Add your devices by QR Code or IP address. Enjoy data-secure LAN printing.
+3D Model Download and Slicing in One Go
+Cloud Model Library Integrated
+500,000+ 3D models as of Nov. 2023
+Adjust 3D Models Like a Breeze
+Rotation, scaling, lettering, support, shell extraction, bottom placement, hole drilling, and more. Handy to personalize the model as you like.
+Auto Layout
+Layout options available to make full use of the build surface when batch-printing small objects.
+Model Splitting
+Easy to split a big model into small pieces with ease. The gap in between as also adjustable.
+Letter Adding
+Customize each model and make your mark by adding a name, brand or any letters to it.
+Quick Slicing with Rich Presets
+Printer, filament, quality presets
+Also supports Klipper printers.
+Fine-tuning with Advanced Settings
+Switch to advanced mode, and a plethora of detailed controls are available. Take your time to dial in the parameters for the printer, filament and quality, until get exactly what you want.
+All Subtleties Revealed in Slice Preview
+The G-code file can be viewed and checked by various attributes such as speed, structure, flow, layer time, fan speed, etc. Every print path or layer can be inspected in so much detail that you won't miss a hair.
+Also a Productive 3D Printing Studio
+LAN Printing (Off-cloud)
+Export to Local
+Upload to Creality Cloud
+Print &amp; Control Remotely over Data-secure LAN
+Visual monitoring of the printing process;
+Granular Remote control (covering start/pause, fan speed, LED, etc.);
+Save time-lapse video to the local;
+Import G-code files for remote printing;
+Keep all data secure on the local area network (LAN)
+Upload Files to Creality Cloud for Printing
+With slice files uploaded to the pesonal center, you can share them directly from the cloud. Enjoy the freedom of cloud printing beyond the limit of space and time.
+Efficient Running of Your Print Farm
+You can do multiple print tasks at the same time, and manage dozens of devices in real time. No sweat to run a print farm by just one person.
+So Many Optimizations for Print Quality
+Better Overhangs in Sharp Style
+One overhang is divided into several sections according to the slanting angles. The section with larger angles will be printed at a slower speed and cooled by a stronger wind. Thanks to the staged speed and smart cooling, each overhang can set adequately in crisp shapes.
+Ideal Paths Planned for Printing
+Each printing path is made optimal. An epic leap in both print quality and speed.
+Variable Line Width
+Create lines of exact width to fill irregular gaps and print ultra thin walls.
+Arc Fitting
+Simulate arc patch with fewer, smooth arc segments instead of linear segments.
+Slim Tree Support for Easy Removal
+Slim tree support is introduced in addition to normal support and strong tree support. It is easier to remove for delivering intact prints. A great help with complex 3D models.
+Less Stringing with Meticulous Retraction
+Retraction is refined by combining nozzle wiping, retraction distance, Z-hop and speed adjustments. Gone is stringing, and what comes out are clean and tidy prints.
+Excellent Calibration for Any Filament
+With built-in calibration 3D models, you can easily calibrate for any filament by trying different parameters and observing the print quality. It paves your way to a 3D slicing expert.
+More Worthy Optimizations
+Creality Print also adopts vibration avoidance, motion advance, and bed adhesion options. Complex structures, small features, edges and details all become better.
+    </description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>-->
+    <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension -->
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
