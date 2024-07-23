@@ -1,5 +1,5 @@
 #Requires -Version 5.0
-#Requires -Modules AU
+#Requires -Modules chocolatey-au
 [cmdletbinding()]
 param (
   [switch]$Force
