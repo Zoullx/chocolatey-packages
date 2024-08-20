@@ -3,7 +3,7 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $checksumType = 'sha256'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$url = 'https://lmu.lge.com/ExternalService/onscreencontrol/win/2.0/OnScreenControl_8.26.zip'
+$url = 'https://lmu.lge.com/ExternalService/onscreencontrol/win/2.0/OnScreenControl_9.28.zip'
 $checksum = '51096DDF31E528C36E59CDC06472A7CFAF9B3A0D348855EF1424C6F91FBCFF67'
 
 $zipPackageArgs = @{
