@@ -4,7 +4,7 @@ $checksumType = 'sha256'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
 $url = 'https://lmu.lge.com/ExternalService/onscreencontrol/win/2.0/OnScreenControl_9.28.zip'
-$checksum = '51096DDF31E528C36E59CDC06472A7CFAF9B3A0D348855EF1424C6F91FBCFF67'
+$checksum = '275B91C19D7EEF233B11E75A441134AF0E84AAAF8FA1878216C8908215476FD5'
 
 $zipPackageArgs = @{
   packageName   = $env:ChocolateyPackageName
