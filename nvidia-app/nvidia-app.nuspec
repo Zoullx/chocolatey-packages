@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Read this before creating packages: https://docs.chocolatey.org/en-us/create/create-packages -->
+<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://community.chocolatey.org/packages). -->
+
+<!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
+
+<!--
+This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
+
+* the package xmlns schema url may cause issues with nuget.exe
+* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
+* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
+-->
+
+<!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
+<!-- * If you are an organization making private packages, you probably have no issues here -->
+<!-- * If you are releasing to the community feed, you need to consider distribution rights. -->
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <!-- This section is about this package, although id and version have ties back to the software -->
+    <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
+    <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
+    <id>nvidia-app</id>
+    <!-- version should MATCH as closely as possible with the underlying software -->
+    <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
+    <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
+    <version>11.0.1.163</version>
+    <packageSourceUrl>https://github.com/Zoullx/chocolatey-packages/tree/master/nvidia-app</packageSourceUrl>
+    <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
+    <owners>Zoull</owners>
+    <!-- ============================== -->
+
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <!-- This section is about the software itself -->
+    <title>NVIDIA App</title>
+    <authors>NVIDIA</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://www.nvidia.com/en-us/software/nvidia-app/</projectUrl>
+    <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
+    <!-- Here is an example using Githack -->
+    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/nvidia-app/nvidia-app.png</iconUrl>
+    <copyright>© 2011-2024 NVIDIA Corporation</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--<projectSourceUrl>Software Source Location - is the software FOSS somewhere? Link to it with this</projectSourceUrl>-->
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>nvidia-app gaming creator driver installer</tags>
+    <summary>The NVIDIA App is the essential companion for PC gamers and creators. Keep your PC up to date with the latest NVIDIA drivers and technology. Optimize games and applications with a new unified GPU control center, capture your favorite moments with powerful recording tools through the in-game overlay, and discover the latest NVIDIA tools and software.</summary>
+    <description>
+# NVIDIA App
+
+The NVIDIA App is the essential companion for PC gamers and creators. Keep your PC up to date with the latest NVIDIA drivers and technology. Optimize games and applications with a new unified GPU control center, capture your favorite moments with powerful recording tools through the in-game overlay, and discover the latest NVIDIA tools and software.
+
+### NVIDIA Graphics Drivers
+
+## The Best Experience For Your Games And Apps
+
+Download the latest GeForce Game Ready and NVIDIA Studio Drivers for your favorite games and applications.
+
+[Experience NVIDIA App for Workstations and Enterprise](https://www.nvidia.com/en-us/software/nvidia-app-enterprise/)
+
+## Game Ready Drivers
+
+GeForce Game Ready Drivers are finely tuned in collaboration with developers and extensively tested to deliver the best experience for your favorite games on the day of game release.
+
+[Learn About GeForce Game Ready Drivers](https://www.nvidia.com/en-us/geforce/game-ready-drivers/)
+
+## Studio Drivers
+
+NVIDIA Studio Drivers provide artists and designers with the best performance and reliability when working with creative applications.
+
+[Learn About NVIDIA Studio Drivers](https://www.nvidia.com/en-us/studio/resources/)
+
+### GPU Control Center
+
+## Optimize and Tune Your GPU
+
+Easily optimize in-game and GPU settings in one location. Customize your NVIDIA graphics settings like VSync, DSR, and Low Latency Mode. Optimize your in-game settings by tapping into the power of the NVIDIA cloud data center to deliver personalized graphics settings based on your system’s GPU, CPU, and display. Plus, monitor and automatically tune your GPU with one click.
+
+### NVIDIA ShadowPlay
+
+## Capture Your Greatest Moments
+
+NVIDIA ShadowPlay simplifies recording of videos and screenshots, featuring DVR-style Instant Replay, enabling users to instantly save the last 30 seconds of gameplay. You can also manually record at up to 8K HDR at 30 fps, or 4K HDR at 120 fps with minimal impact to performance. RTX 40-series GPU owners can now record in AV1 codec, which delivers higher fidelity video with less disk space needed. NVIDIA Highlights automatically captures key moments, clutch kills, and match-winning plays, ensuring that your best gaming moments are automatically saved.
+
+### NVIDIA Overlay
+
+## Measure Your Performance
+
+Display real-time FPS and performance statistics through the newly updated NVIDIA overlay. Tailor the display to showcase metrics like GPU and CPU utilization, FPS 1% Low, and PC and system latency with integrated [NVIDIA Reflex Analyzer](https://www.nvidia.com/en-us/geforce/news/reflex-latency-analyzer-360hz-g-sync-monitors/) support.
+
+### NVIDIA Freestyle
+
+## AI-Enhanced Game Visuals
+
+Customize your game's appearance in real time with NVIDIA Freestyle with powerful new AI filters like RTX Dynamic Vibrance and RTX HDR. Integrated at the driver level for seamless compatibility, Freestyle supports over 1200 games.
+
+### RTX Dynamic Vibrance
+
+RTX Dynamic Vibrance is an AI-powered filter that enhances visual clarity, allowing players to better distinguish in-game elements on a per-app basis.  Not only do colors pop more on screen, it’s done with a perfect balance, to avoid color crushing.
+
+### RTX HDR
+
+RTX HDR is a new Freestyle filter powered by AI, which seamlessly brings the vibrant world of High Dynamic Range (HDR) to games not originally equipped with HDR support. Take advantage of your HDR-compatible monitor for a broad spectrum of games running on DirectX and Vulkan.
+
+## Discover NVIDIA Applications
+
+The NVIDIA app offers an easy way to discover and launch NVIDIA gaming and creator applications.
+
+- **GeForce NOW**
+- **NVIDIA ChatRTX**
+- **NVIDIA Broadcast**
+- **NVIDIA Canvas**
+- **NVIDIA RTX Remix**
+
+### GeForce NOW
+
+## The Next Generation in Cloud Gaming
+
+Experience RTX performance on any device you own with [GeForce NOW](https://www.nvidia.com/en-us/geforce-now/), NVIDIA’s cloud gaming platform. Play on the go, while waiting for a game download, or just save space on your hard drive by accessing your library from the cloud. GeForce NOW offers the perfect complimentary experience to keep you gaming wherever you are.
+
+[Join Now](https://www.nvidia.com/en-us/geforce-now/)
+    </description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>-->
+    <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension -->
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
