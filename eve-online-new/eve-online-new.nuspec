@@ -22,25 +22,25 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>eve-online</id>
+    <id>eve-online-new</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>3.2.3.00001</version>
-    <packageSourceUrl>https://github.com/Zoullx/chocolatey-packages/tree/master/eve-online</packageSourceUrl>
+    <version>1.6.4</version>
+    <packageSourceUrl>https://github.com/Zoullx/chocolatey-packages/tree/master/eve-online-new</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>Zoull</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>[Deprecated] EVE Online Launcher</title>
+    <title>EVE Online Launcher (New)</title>
     <authors>CCP</authors>
     <!-- projectUrl is required for the community feed -->
     <projectUrl>https://www.eveonline.com/</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/eve-online/eve-online.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/eve-online-new/eve-online.png</iconUrl>
     <copyright>© 1997-2022 CCP</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl> -->
@@ -54,7 +54,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <description>
 # NOTE:
 
-The EVE Online Launcher package has been deprecated due to the version issues. The EVE Online Launcher can be installed with the EVE Online Launcher (New) package. This package also points to the new package.
+CCP has updated their launcher and is deprecating their original launcher. This package has been updated to use their new launcher, but because of the differences in the versions of the original launcher and this new launcher, you may have to uninstall this package if it's already installed under one of those old versions and install one of the new versions for the package to upgrade properly again.
 
 # THE #1 SPACE MMO
 
@@ -90,14 +90,14 @@ Fly Safe o7
     <!-- =============================== -->
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <dependencies>
-      <dependency id="eve-online-new" version="1.6.4" />
-      <!-- <dependency id="" version="[__EXACT_VERSION__]" />
+    <!-- <dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
       <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
       <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" /> -->
-    </dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies> -->
     <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension
          - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
          - You want to use Get-PackageParameters and on less than 0.11.0
@@ -108,5 +108,8 @@ Fly Safe o7
     <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
     <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
-  <files />
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
