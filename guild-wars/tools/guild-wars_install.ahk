@@ -19,7 +19,7 @@ okText := "|<>*119$17.D24n4P39Y2K84wE9cUGNVYFa8FsEs"
 
 ; Choose install location
 ; C:\Program Files (x86)\Guild Wars (Default)
-if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0.1, 0.1, okText)) {
+if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0.4, 0.4, okText)) {
     Sleep 1000
     ControlSend "{Enter}" ; OK
 }

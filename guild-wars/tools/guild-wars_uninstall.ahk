@@ -13,10 +13,10 @@ winTitle := "ahk_class ArenaNet_Dialog_Class ahk_exe Gw.exe"
 WinWait(winTitle)
 
 uninstallText :=
-    "|<>*98$66.UA03000000nUA03000000nUA00000600nUA00000600nUArXBsTDXsnUAznDwzjjwnUAsnCAlaAAnUAknAAs63wnUAknAAT6DwnkAknAA1aAAnkMknAAlaAAnzsknAAzbjwnDUknAAT3bgnU"
+"|<>*98$66.UA03000000nUA03000000nUA00000600nUA00000600nUArXBsTDXsnUAznDwzjjwnUAsnCAlaAAnUAknAAs63wnUAknAAT6DwnkAknAA1aAAnkMknAAlaAAnzsknAAzbjwnDUknAAT3bgnU"
 
 ; Uninstall Guild Wars
-if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0.1, 0.1, uninstallText)) {
+if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0.4, 0.4, uninstallText)) {
     Sleep 1000
     ControlSend "{Tab}" ; Switch from Reinstall to Uninstall
     ControlSend "{Enter}" ; Uninstall
