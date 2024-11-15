@@ -15,12 +15,11 @@ winTitle := "ahk_class ArenaNet_Dialog_Class ahk_exe GwSetup.exe"
 ; Wait until the Guild Wars Installer is found
 WinWait(winTitle)
 
-okText:="|<>*122$48.0000000000000000000000000000000001zU60M001zU60M007Vs61s007Vs61s00S0S67U00S0S67U00M066S000M066S000M067y000M067y000M067a000M067a000M0667U00M0667U00S0S61U00S0S61U007Vs60M007Vs60M001zU60S001zU60S000000000U"
+okText := "|<>*119$17.D24n4P39Y2K84wE9cUGNVYFa8FsEs"
 
 ; Choose install location
 ; C:\Program Files (x86)\Guild Wars (Default)
-If (FindText(&outputX:="wait", &outputY:=-1,0,0,0,0,0,0, okText))
-{
+if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0.1, 0.1, okText)) {
     Sleep 1000
     ControlSend "{Enter}" ; OK
 }
@@ -32,8 +31,7 @@ winTitle := "ahk_class ArenaNet_Dx_Window_Class ahk_exe Gw.exe"
 ; Game Window
 ; This will cause a wait for downloads to finish and for the game window to open
 WinWait(winTitle)
-If WinExist(winTitle)
-{
+if WinExist(winTitle) {
     Sleep 2000
     WinClose
     FileCreateShortcut programFilesx86 "\Guild Wars\Gw.exe", programData "\Microsoft\Windows\Start Menu\Programs\Guild Wars\Guild Wars.lnk"
