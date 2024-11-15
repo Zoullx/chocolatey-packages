@@ -10,7 +10,9 @@ SetWorkingDir A_ScriptDir ; Ensures a consistent starting directory.
 appData := EnvGet("AppData")
 
 ; Delete the left over AppData
-DirDelete appData "\Guild Wars 2", true
+if (DirExist(appData "\Guild Wars 2")) {
+    DirDelete appData "\Guild Wars 2", true
+}
 
 winTitle := "ahk_class ArenaNet ahk_exe Gw2.exe"
 
@@ -25,7 +27,7 @@ installText :=
     "|<>*192$65.03UUE0tw3kTb7q8aNlyTlzC7gxQn3wzbyQ7Mzty7tzDwt6sznt7nyTtnBsTbnDbwznb/wTDiDDtzbC6wSS0STnzCSAwwwwwwbqQyMntnstn700yoD13U040E"
 
 ; Start install
-if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0, 0, installText)) {
+if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0.4, 0.4, installText)) {
     Sleep 1000
     Send "{Tab}"
     Send "{Tab}"
@@ -68,7 +70,7 @@ loginText :=
 
 ; Start install
 ; This will cause a wait for downloads to finish and for the game launcher to open
-if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0, 0, loginText)) {
+if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0.4, 0.4, loginText)) {
     Sleep 1000
     WinClose
 }
