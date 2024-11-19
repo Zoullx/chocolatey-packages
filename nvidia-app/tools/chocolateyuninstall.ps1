@@ -15,9 +15,6 @@ $webFileArgs = @{
 
 Get-ChocolateyWebFile @webFileArgs
 
-# $fileName = (Get-ChildItem $toolsDir -Filter *.exe | Select-Object -First 1).Name
-# $fileLocation = Join-Path $toolsDir $fileName
-
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   softwareName   = 'NVIDIA App'
