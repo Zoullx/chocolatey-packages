@@ -15,7 +15,11 @@ function global:au_BeforeUpdate {
 
 function global:au_SearchReplace {
   @{
-    ".\tools\chocolateyInstall.ps1" = @{
+    ".\tools\chocolateyInstall.ps1"   = @{
+      "(?i)(^[$]url\s*=\s*)'.*'"      = "`${1}'$($Latest.URL32)'"
+      "(?i)(^[$]checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
+    }
+    ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)(^[$]url\s*=\s*)'.*'"      = "`${1}'$($Latest.URL32)'"
       "(?i)(^[$]checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
     }
