@@ -27,8 +27,8 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $download_page = Invoke-WebRequest $downloadUrl -UseBasicParsing
-  $url = $download_page.links.href -match 'ia32-.*\.exe$' | Select -First 1
-  $url64 = $download_page.links.href -match 'x64-.*\.exe$' | Select -First 1
+  $url = $download_page.links.href -match 'ia32-.*\.exe$' | Select-Object -First 1
+  $url64 = $download_page.links.href -match 'x64-.*\.exe$' | Select-Object -First 1
   $url -match '.*-(?<Version>.*)-.*-full\.exe$'
   $version = $matches.Version
 
