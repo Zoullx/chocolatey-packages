@@ -2,6 +2,7 @@
 
 All of the packages that I maintain on [Chocolatey](https://chocolatey.org):
 
+- [Beeper](https://community.chocolatey.org/packages/beeper-app)
 - [EA App](https://community.chocolatey.org/packages/ea-app)
 - [EVE Online](https://community.chocolatey.org/packages/eve-online)
 - [Final Fantasy XIV](https://community.chocolatey.org/packages/final-fantasy-xiv)
@@ -17,6 +18,7 @@ All of the packages that I maintain on [Chocolatey](https://chocolatey.org):
 - [Razer Synapse 3](https://community.chocolatey.org/packages/razer-synapse-3)
 - [Redragon M913](https://community.chocolatey.org/packages/redragon-m913)
 - [Rockstar Games Launcher](https://community.chocolatey.org/packages/rockstar-launcher)
+- [Station](https://community.chocolatey.org/packages/station)
 
 Packages that I maintain internally
 
