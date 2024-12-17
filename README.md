@@ -13,6 +13,7 @@ All of the packages that I maintain on [Chocolatey](https://chocolatey.org):
 - [League of Legends](https://community.chocolatey.org/packages/leagueoflegends)
 - [Legacy Games Launcher](https://community.chocolatey.org/packages/legacy-games-launcher)
 - [LG UltraGear Control Center](https://community.chocolatey.org/packages/lg-ultragear-control-center)
+- [Morgen](https://community.chocolatey.org/packages/morgen)
 - [OnScreen Control](https://community.chocolatey.org/packages/onscreen-control)
 - [Razer Synapse 2](https://community.chocolatey.org/packages/razer-synapse-2)
 - [Razer Synapse 3](https://community.chocolatey.org/packages/razer-synapse-3)
