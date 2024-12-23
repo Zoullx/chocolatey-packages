@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://us.download.nvidia.com/nvapp/client/11.0.1.184/NVIDIA_app_v11.0.1.184.exe'
+$url = 'https://us.download.nvidia.com/nvapp/client/11.0.1.189/NVIDIA_app_v11.0.1.189.exe'
 $fileName = [System.IO.Path]::GetFileName($url)
 $fileLocation = Join-Path $toolsDir $fileName
-$checksum = '5e19a4a6a87572ccb09b026a963416d564d9f752250b87bc11e51957741a4771'
+$checksum = 'f9d3e9aad532d4a9a804b14667fdcb71cd6ab8cbeca7089e49fbeca77ac7c653'
 
 $webFileArgs = @{
   packageName  = $env:ChocolateyPackageName
