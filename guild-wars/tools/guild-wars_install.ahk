@@ -1,6 +1,6 @@
 #Warn ; Enable warnings to assist with detecting common errors.
 
-#include <FindText>
+#include "%A_ScriptDir%\..\..\findtext\tools\Lib\FindText.ahk"
 
 SetTitleMatchMode 1 ; A windows's title must start with the specified WinTitle to be a match.
 SetControlDelay 0

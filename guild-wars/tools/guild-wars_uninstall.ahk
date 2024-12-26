@@ -1,6 +1,6 @@
 #Warn ; Enable warnings to assist with detecting common errors.
 
-#include <FindText>
+#include "%A_ScriptDir%\..\..\findtext\tools\Lib\FindText.ahk"
 
 SetTitleMatchMode 1 ; A windows's title must start with the specified WinTitle to be a match.
 SetControlDelay 0
@@ -13,7 +13,7 @@ winTitle := "ahk_class ArenaNet_Dialog_Class ahk_exe Gw.exe"
 WinWait(winTitle)
 
 uninstallText :=
-"|<>*98$66.UA03000000nUA03000000nUA00000600nUA00000600nUArXBsTDXsnUAznDwzjjwnUAsnCAlaAAnUAknAAs63wnUAknAAT6DwnkAknAA1aAAnkMknAAlaAAnzsknAAzbjwnDUknAAT3bgnU"
+    "|<>*98$66.UA03000000nUA03000000nUA00000600nUA00000600nUArXBsTDXsnUAznDwzjjwnUAsnCAlaAAnUAknAAs63wnUAknAAT6DwnkAknAA1aAAnkMknAAlaAAnzsknAAzbjwnDUknAAT3bgnU"
 
 ; Uninstall Guild Wars
 if (FindText(&outputX := "wait", &outputY := -1, 0, 0, 0, 0, 0.4, 0.4, uninstallText)) {
