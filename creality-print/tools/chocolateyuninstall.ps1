@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
-  softwareName   = 'Creality Print 5.0'
+  softwareName   = 'Creality Print*'
   fileType       = 'EXE'
   silentArgs     = '/S'
   validExitCodes = @(0, 3010, 1605, 1614, 1641)
