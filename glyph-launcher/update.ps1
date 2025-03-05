@@ -10,12 +10,14 @@ $ErrorActionPreference = 'Stop'
 $downloadUrl = 'https://glyph.dyn.triongames.com/glyph/live/GlyphInstall.exe'
 
 function Get-RemoteFileVersion( [string] $Url ) {
+  # The file now seems to download as an exe, so the change extension is probably not needed anymore
   $fn = [System.IO.Path]::ChangeExtension([System.IO.Path]::GetTempFileName(), "exe")
   Invoke-WebRequest $Url -Outfile $fn -UseBasicParsing
   $fi = Get-ItemProperty -Path $fn
   $sfo = (New-Object -ComObject Shell.Application).Namespace($fi.Directory.FullName)
   $sfi = $sfo.ParseName($fi.Name)
-  $res = $sfo.GetDetailsOf($sfi, [int] 298)
+  # Not sure why this suddenly changed from 298 to 299
+  $res = $sfo.GetDetailsOf($sfi, [int] 299)
   Remove-Item $fn -ea ignore
   return $res
 }
@@ -27,7 +29,7 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^[$]checksum\s*=\s*)'.*'"   = "`${1}'$($Latest.Checksum32)'"
+      "(?i)(^[$]checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
     }
   }
 }
