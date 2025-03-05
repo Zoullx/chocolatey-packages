@@ -13,7 +13,7 @@ $initialWorkingDir = $workingDirectory
 $url = 'https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = 'f763066f5ec2898cdee63cb054eff0284d84d66bda9b93277803480a585b2aa0'
+$checksum = 'd3a83b442e688393ea4a0eb8d57546a7671264b662266f49c9b522955f8b7a49'
 
 # Stop Rockstar Services
 Stop-Process -Name Launcher -Force -ErrorAction SilentlyContinue
