@@ -18,4 +18,4 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
-Start-WaitandStop "EADesktop"
+Start-WaitandStop "EA"
