@@ -1,20 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url      = 'https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe'
+$url = 'https://origin-a.akamaihd.net/EA-Desktop-Client-Download/installer-releases/EAappInstaller.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = 'a86a8b8011718861b116c2a555d62560474420b51286a58ad50f1886a15f4a9a'
+$checksum = '6b0b7041761f4204822fe6d67132ce4e13402895802f9f4dc3495c3c0d2a9e2b'
 
 $packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE'
-  url           = $url
-  softwareName  = 'EA app*'
-  checksum      = $checksum
-  checksumType  = 'sha256'
-  silentArgs    = '/S'
-  validExitCodes= @(0, 3010, 1641)
+  packageName    = $env:ChocolateyPackageName
+  unzipLocation  = $toolsDir
+  fileType       = 'EXE'
+  url            = $url
+  softwareName   = 'EA app*'
+  checksum       = $checksum
+  checksumType   = 'sha256'
+  silentArgs     = '/S'
+  validExitCodes = @(0, 3010, 1641)
 }
 
 Install-ChocolateyPackage @packageArgs
