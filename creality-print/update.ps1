@@ -24,9 +24,14 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
   $response = Invoke-RestMethod $downloadUrl -Method Get
-  $asset = $response.assets | Where-Object { $_.name -match "CrealityPrint_(?<Version>.*)_Release\.exe" } | Select-Object -First 1
+  $asset = $response.assets | Where-Object { $_.name -match "CrealityPrint_(?<Version>.*)_(?<Branch>.*)\.exe" } | Select-Object -First 1
   $url = $asset.browser_download_url
   $version = $matches.Version
+  if ($matches.Branch -ne 'Release') {
+    $version += "-$($matches.Branch)"
+  }
+
+  Write-Host $version
 
   return @{
     Version = $version
