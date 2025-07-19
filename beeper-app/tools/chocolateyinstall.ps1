@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://download.beeper.com/windows/nsis/x64'
+$url = 'https://api.beeper.com/desktop/download/windows/x64/stable/com.automattic.beeper.desktop'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = '62D5FD251BD4E42694EF52F397854E6EBA247914E86CC29AA43D92F3920D5B7C'
+$checksum = '4733b4d36089c30aa96169f87e2f5887e2d1626d9679c325d7dfe51023667ec9'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName

@@ -7,7 +7,7 @@ param (
 
 $ErrorActionPreference = 'Stop'
 
-$downloadUrl = 'https://download.beeper.com/windows/nsis/x64'
+$downloadUrl = 'https://api.beeper.com/desktop/download/windows/x64/stable/com.automattic.beeper.desktop'
 
 function Get-RemoteFileVersion( [string] $Url ) {
   $fn = [System.IO.Path]::GetTempFileName()
