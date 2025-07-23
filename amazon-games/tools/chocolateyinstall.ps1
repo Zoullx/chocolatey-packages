@@ -15,3 +15,4 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+Start-WaitandStop 'Amazon Games*'
