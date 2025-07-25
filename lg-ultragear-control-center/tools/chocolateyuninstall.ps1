@@ -1,9 +1,9 @@
 $ErrorActionPreference = 'Stop';
-$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $checksumType = 'sha256'
 
-$url      = 'https://gscs-b2c.lge.com/downloadFile?fileId=2DPPmX8OarXpELvvB8qMww'
-$checksum = '2273FA80CD453F24985648F078981BCE0DC81353418DAD62C9EEDA4EFBF76BF7'
+$url = 'https://gscs-b2c.lge.com/downloadFile?fileId=LtfQlk4JRr6no8OnWggXQ'
+$checksum = 'C646D31947A90E5BACA758D115265FACD7813BBE6F18D9711D5F558629D8DF05'
 
 $zipPackageArgs = @{
   packageName   = $env:ChocolateyPackageName
@@ -20,13 +20,13 @@ $fileLocation = Join-Path $toolsDir $fileName
 $silentScript = Join-Path $toolsDir 'uninstall.iss'
 
 $packageArgs = @{
-  packageName   = $env:ChocolateyPackageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE'
-  file          = $fileLocation
-  softwareName  = 'LG UltraGear Control Center'
-  silentArgs    = "-f1`"$silentScript`" -s -uninst"
-  validExitCodes= @(0, 3010, 1605, 1614, 1641)
+  packageName    = $env:ChocolateyPackageName
+  unzipLocation  = $toolsDir
+  fileType       = 'EXE'
+  file           = $fileLocation
+  softwareName   = 'LG UltraGear Control Center'
+  silentArgs     = "-f1`"$silentScript`" -s -uninst"
+  validExitCodes = @(0, 3010, 1605, 1614, 1641)
 }
 
 Uninstall-ChocolateyPackage @packageArgs
