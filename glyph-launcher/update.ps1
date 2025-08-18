@@ -16,8 +16,14 @@ function Get-RemoteFileVersion( [string] $Url ) {
   $fi = Get-ItemProperty -Path $fn
   $sfo = (New-Object -ComObject Shell.Application).Namespace($fi.Directory.FullName)
   $sfi = $sfo.ParseName($fi.Name)
-  # Not sure why this suddenly changed from 298 to 299
-  $res = $sfo.GetDetailsOf($sfi, [int] 299)
+  $i = 0
+  for (; $i -le 500; $i++) {
+    $propName = $sfo.GetDetailsOf($null, $i)
+    if ($propName -eq 'Product version') {
+      break
+    }
+  }
+  $res = $sfo.GetDetailsOf($sfi, $i)
   Remove-Item $fn -ea ignore
   return $res
 }
