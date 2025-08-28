@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'https://beeper-desktop.download.beeper.com/builds/Beeper%20x64%204.1.111.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
+$url = 'https://beeper-desktop.download.beeper.com/builds/Beeper%20x64%204.1.145.exe'
 $checksum = 'f2bf0c4ebd6d57f24acb1d2c9d0c2a702af461de653b867149d8f11349bdc11c'
 
 $packageArgs = @{

@@ -24,6 +24,7 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
+      "(?i)(^[$]url\s*=\s*)'.*'"      = "`${1}'$($Latest.URL32)'"
       "(?i)(^[$]checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
     }
   }
@@ -34,7 +35,7 @@ function global:au_GetLatest {
 
   return @{
     Version = $version
-    URL32   = $downloadUrl
+    URL32   = [uri]::EscapeUriString("https://beeper-desktop.download.beeper.com/builds/Beeper x64 $version.exe")
   }
 }
 
