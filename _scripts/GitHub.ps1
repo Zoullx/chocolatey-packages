@@ -23,7 +23,7 @@ function Get-GitHubLatestRelease($project, $tagPrefix, [switch] $newest) {
 
   $token = $env:github_api_key
   $script:headers = @{
-    'User-Agent' = 'flcdrg'
+    'User-Agent' = 'zoullx'
   }
   if ($token) {
     $script:headers['Authorization'] = ("token {0}" -f $token)
