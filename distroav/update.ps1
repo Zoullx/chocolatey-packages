@@ -29,8 +29,8 @@ function global:au_GetLatest {
   }
 }
 
-function global:au_AfterUpdate ($Package) {
-  Update-ReleaseNotes $Package
-}
+# function global:au_AfterUpdate ($Package) {
+#   Update-ReleaseNotes $Package
+# }
 
 update -ChecksumFor none
