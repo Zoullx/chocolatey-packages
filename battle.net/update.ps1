@@ -21,6 +21,8 @@ function Get-RemoteFileVersion( [string] $Url ) {
 
 function global:au_SearchReplace {
   # we don't actually have anything to replace, but we need this here to not throw an error
+  # if we don't include this empty object, then we get a null keys error
+  @{}
 }
 
 function global:au_GetLatest {
