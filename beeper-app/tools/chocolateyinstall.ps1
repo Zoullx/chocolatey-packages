@@ -2,8 +2,8 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$url = 'https://beeper-desktop.download.beeper.com/builds/Beeper%20x64%204.2.455.exe'
-$checksum = 'a6e872609a5e7c8bc75a023e2f7c4f8b381a69943d949286c4d6c46aa4096213'
+$url = 'https://beeper-desktop.download.beeper.com/builds/Beeper%20x64%204.2.482.exe'
+$checksum = 'e09d7be8489e1014400a2e4b3c63c6417fa8b96e469aba33340aa3a163a29f15'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
