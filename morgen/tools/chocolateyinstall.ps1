@@ -3,7 +3,7 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = 'https://dl.todesktop.com/210203cqcj00tw1/windows/nsis/x64'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = '2d06eb053ad543c570a9e4ba0639f1ef07dd681e1c9fcb6419cefeeef3d60f66'
+$checksum = '21c3e00fa2388ce37dfaf567fba2fecc7455b2fa411384b2351d910bc55dd54f'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
