@@ -2,7 +2,7 @@
 
 # Razer Synapse 3
 
-Trying to figure out some final changes and get the maintainer to take my updates, but the auto update part will probably be internal only as the web installer will have to be installed to get the links for the internal components
+# No longer receiving updates and it's recommended to upgrade to Razer Synapse 4
 
 Maximize your unfair advantage with Razer Synapse 3, the unified hardware configuration tool that takes your Razer device to the next level. Get access to advanced options and granular control as you rebind buttons, assign macros, personalize device lighting and more.
 

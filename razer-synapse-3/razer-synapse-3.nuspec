@@ -52,6 +52,8 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>razer synapse</tags>
     <summary>Maximize your unfair advantage with Razer Synapse 3, the unified hardware configuration tool that takes your Razer device to the next level.</summary>
     <description>
+# Razer Synapse 3 is no longer receiving updates and it's recommended to upgrade to Razer Synapse 4
+
 Maximize your unfair advantage with Razer Synapse 3, the unified hardware configuration tool that takes your Razer device to the next level. Get access to advanced options and granular control as you rebind buttons, assign macros, personalize device lighting and more.
 
 The key features of Razer Synapse 3 are:
