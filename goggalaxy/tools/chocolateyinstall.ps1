@@ -3,9 +3,9 @@
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'EXE'
-  url            = 'https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_2.0.93.55.exe'
+  url            = 'https://content-system.gog.com/open_link/download?path=/open/galaxy/client/setup_galaxy_2.0.94.27.exe'
   softwareName   = 'GOG Galaxy*'
-  checksum       = '7d926b84436c0a497d327be430113c7d'
+  checksum       = '8881f21534de83d6ee7c99b2e8e4c5fc'
   checksumType   = 'md5'
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0, 1) # Code 1 - Same or newer version already installed. Uninstall before trying to downgrade.
