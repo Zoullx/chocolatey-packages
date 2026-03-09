@@ -15,7 +15,7 @@ function global:au_SearchReplace {
 
 function global:au_GetLatest {
 
-  $release = Get-GitHubLatestRelease -project 'DistroAV/DistroAV' -newest
+  $release = Get-GitHubLatestRelease -project 'DistroAV/DistroAV'
 
   $windowsAsset = ($release.assets | Where-Object { $_.name -Match ".*\.exe" } | Select-Object -First 1)
 
@@ -33,4 +33,4 @@ function global:au_GetLatest {
 #   Update-ReleaseNotes $Package
 # }
 
-update -ChecksumFor none
+update -NoCheckUrl -ChecksumFor none

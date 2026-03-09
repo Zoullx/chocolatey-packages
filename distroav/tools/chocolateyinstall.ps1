@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
 $url = 'https://github.com/DistroAV/DistroAV/releases/download/6.1.1/distroav-6.1.1-windows-x64-Installer.exe'
-$checksum = 'E17DE603965F0EFD526A3E329AAFFBCBE0347E6354047654CEBDE5287777CBED'
+$checksum = 'e17de603965f0efd526a3e329aaffbcbe0347e6354047654cebde5287777cbed'
 
 # Now install obs-ndi
 $packageArgs = @{
