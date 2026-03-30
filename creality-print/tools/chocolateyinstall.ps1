@@ -2,8 +2,8 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$url = 'https://github.com/CrealityOfficial/CrealityPrint/releases/download/v7.0.0/CrealityPrint_7.0.0.4127_Release.exe'
-$checksum = 'cc8651ed736133bf571bf58f3559a9f60871eea0e9a4278eeda4d08299d45206'
+$url = 'https://github.com/CrealityOfficial/CrealityPrint/releases/download/v7.0.1/CrealityPrint_7.0.1.4212_Release.exe'
+$checksum = '9a7e1f2f41f0e40283010d51fe98a2aa54da6c4dd4432791eff8341b425a0780'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
