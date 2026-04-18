@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $downloadUrl = 'https://download.amazongames.com/AmazonGamesSetup.exe'
 

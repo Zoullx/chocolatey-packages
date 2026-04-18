@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $releases = 'https://remote-config.gog.com/components/webinstaller?component_version=2.0.0'
 $headers = @{}

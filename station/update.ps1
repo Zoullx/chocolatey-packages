@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $downloadUrl = 'https://api.github.com/repos/getstation/desktop-app/releases/latest'
 

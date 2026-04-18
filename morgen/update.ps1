@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $downloadUrl = 'https://dl.todesktop.com/210203cqcj00tw1/windows/nsis/x64'
 

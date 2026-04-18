@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $razerSynapseUrl = 'http://rzr.to/synapse-pc-download'
 
@@ -16,8 +17,8 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^[$]url\s*=\s*)'.*'"        = "`${1}'$($Latest.URL32)'"
-      "(?i)(^[$]checksum\s*=\s*)'.*'"   = "`${1}'$($Latest.Checksum32)'"
+      "(?i)(^[$]url\s*=\s*)'.*'"      = "`${1}'$($Latest.URL32)'"
+      "(?i)(^[$]checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
     }
   }
 }
@@ -25,7 +26,8 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
   $response = try {
     Invoke-WebRequest -Uri $razerSynapseUrl -UseBasicParsing
-  } catch {
+  }
+  catch {
     $_.Exception.Response
   }
   if ($response.StatusCode -ne 200) {

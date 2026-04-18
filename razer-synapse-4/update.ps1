@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $discoveryUrl = 'https://discovery3.razerapi.com/api/v1/endpoints'
 $manifestUrl = 'https://manifest3.razerapi.com/api/v1/releases/{0}/tags/{1}/products?os=windows&osver=11&arch=64'

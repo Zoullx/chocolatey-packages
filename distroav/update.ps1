@@ -1,6 +1,7 @@
 Import-Module chocolatey-au
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 function global:au_SearchReplace {
   @{

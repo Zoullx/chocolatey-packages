@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $Env:au_PushUrl = 'https://chocolatey.zdl.io/chocolatey'
 $au_GalleryPackageRootUrl = 'https://chocolatey.zdl.io/chocolatey/Packages'

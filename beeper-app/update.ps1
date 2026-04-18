@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $downloadUrl = 'https://api.beeper.com/desktop/download/windows/x64/stable/com.automattic.beeper.desktop'
 

@@ -6,6 +6,7 @@ param (
 )
 
 $ErrorActionPreference = 'Stop'
+$ProgressPreference = 'SilentlyContinue'
 
 $downloadUrl = 'https://www.humblebundle.com/app/download'
 
@@ -24,14 +25,14 @@ function global:au_BeforeUpdate {
 function global:au_SearchReplace {
   @{
     ".\tools\chocolateyInstall.ps1" = @{
-      "(?i)(^[$]checksum\s*=\s*)'.*'"   = "`${1}'$($Latest.Checksum32)'"
+      "(?i)(^[$]checksum\s*=\s*)'.*'" = "`${1}'$($Latest.Checksum32)'"
     }
   }
 }
 
 function global:au_GetLatest {
   $originalVersion = Get-RemoteFileVersion -Url $downloadUrl
-  $version = $originalVersion -Replace "\+","."
+  $version = $originalVersion -Replace "\+", "."
 
   return @{
     Version = $version
