@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$RazerAppEngineUrl = 'https://manifest-assets.razersynapse.com/1754652226fc4V0s2BRazerAppEngineSetup-v4.0.563.exe'
-$RazerSynapse4Url = 'https://manifest-assets.razersynapse.com/1754652305Bbi6eb8iRazerSynapse4-Web-v4.0.563.exe'
-$RazerChromaUrl = 'https://manifest-assets.razersynapse.com/17546529453ad24dWjRazerChroma-Web-v4.0.563.exe'
-$RazerCentralUrl = 'https://manifest-assets.razersynapse.com/174185873801onVKXeRazerCentral_v7.18.0.849.exe'
-$RazerGameManagerUrl = 'https://manifest-assets.razersynapse.com/1748421749hhMKJNozRazerGameManager_3.10.0.917.exe'
-$RazerAppEngineChecksum = '561b536e39c2f557102569fb5780014121ee256c4e15001bd832a2060de896a1'
-$RazerSynapse4Checksum = 'b98f60447d8bc34abc65f116bb501c6b33ce5e750e86984f72ab6c5bf58b78b4'
-$RazerChromaChecksum = 'd4e3a3a9a57b6cdea3998bfa117df704c16bd9833c02355ae6b028a31457f42d'
-$RazerCentralChecksum = '007cfda793716495112fe90bd36e2b99395915cf65f5673f358c440624ba3e90'
-$RazerGameManagerChecksum = '272766991ea8f6355fa17a647d0b7715c8f9019e7047f0437983817ed28ec91c'
+$RazerAppEngineUrl = 'https://manifest-assets.razersynapse.com/1783511305UoZQZzlFRazerAppEngineSetup-v4.0.695.exe'
+$RazerSynapse4Url = 'https://manifest-assets.razersynapse.com/1783511238Mc6ogn8gRazerSynapse4-Web-v4.0.695.exe'
+$RazerChromaUrl = 'https://manifest-assets.razersynapse.com/1783511414vZ7UiWaqRazerChroma-Web-v4.0.695.exe'
+$RazerCentralUrl = 'https://manifest-assets.razersynapse.com/1778658202qKgcx3XSRazerCentral_v7.23.0.1220.exe'
+$RazerGameManagerUrl = 'https://manifest-assets.razersynapse.com/1771912713VmKGN0gDRazerGameManager_3.13.0.1050.exe'
+$RazerAppEngineChecksum = 'b4467e364b484735fb9ce16944b29c262c6fdc8c253a57f9be092c3ff4f2aab1'
+$RazerSynapse4Checksum = 'be40903e8ce15a2d9912e7f8ba2ab54d71495637d5252b06372a34e741e8dcbb'
+$RazerChromaChecksum = '1fca7983ca90dae1a63f970e6f0489f382da9cb31073a1d85572719aeae9298e'
+$RazerCentralChecksum = 'aace29226ac0cdf023dc06ebf4cfaac54597138d42810da0cbe99b8a90dc3fd8'
+$RazerGameManagerChecksum = '82ee0061eab3929c8718736b370a70ef1956d7c1202d698a983d69e14c9ff73e'
 
 $RazerAppEnginePackageArgs = @{
   packageName    = 'Razer App Engine'
