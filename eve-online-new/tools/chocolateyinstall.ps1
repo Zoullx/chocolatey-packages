@@ -3,7 +3,7 @@ $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = 'https://launcher.ccpgames.com/eve-online/release/win32/x64/eve-online-latest+Setup.exe'
 
 # DO NOT CHANGE THESE MANUALLY, USE update.ps1
-$checksum = '6373f77c77c76532d28da607cd8ae9ad7bc58f4b72ca7889254c5449e59d44f9'
+$checksum = '2f179cbfbee18833a30482ef4e97418f36535394b31f30608a19e09cfe7a0006'
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
