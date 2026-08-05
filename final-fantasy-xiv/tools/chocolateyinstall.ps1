@@ -6,7 +6,7 @@ $ffInstallScript = Join-Path $toolsDir 'Setup.iss'
 $ffInstallUnzipFile = Join-Path $toolsDir 'ffxivsetup_ft.exe'
 $ffInstallParams = "x `"$ffInstallUnzipFile`" -t# -aoa -bd -bb1 -o`"$toolsDir`" -y"
 $url      = 'https://etailers.square-enix-games.com/etailer/283335?e=Free%20Trial&p=Windows&s=Square%20Enix%20Store'
-$checksum = '6810954D1EAF0D0951BB5534D6369644405FBD784F7374F85627A53FA70FB0DF'
+$checksum = 'CBD6864A77201C3F23F40DE0AE7050B5259E7A392EF551CB76E394E901FCD4C4'
 
 if (-not (Test-Path -Path "HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{2B41E132-07DF-4925-A3D3-F2D1765CCDFE}")) {
     # Download EXE
