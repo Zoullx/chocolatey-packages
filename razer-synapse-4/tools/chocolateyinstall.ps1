@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$RazerAppEngineUrl = 'https://manifest-assets.razersynapse.com/1783511305UoZQZzlFRazerAppEngineSetup-v4.0.695.exe'
-$RazerSynapse4Url = 'https://manifest-assets.razersynapse.com/1783511238Mc6ogn8gRazerSynapse4-Web-v4.0.695.exe'
-$RazerChromaUrl = 'https://manifest-assets.razersynapse.com/1783511414vZ7UiWaqRazerChroma-Web-v4.0.695.exe'
+$RazerAppEngineUrl = 'https://manifest-assets.razersynapse.com/1789694553BOrGfRHQRazerAppEngineSetup-v4.0.823.exe'
+$RazerSynapse4Url = 'https://manifest-assets.razersynapse.com/1789694431HWi8mIhGRazerSynapse4-Web-v4.0.823.exe'
+$RazerChromaUrl = 'https://manifest-assets.razersynapse.com/178969467491wOyrmwRazerChroma-Web-v4.0.823.exe'
 $RazerCentralUrl = 'https://manifest-assets.razersynapse.com/1778658202qKgcx3XSRazerCentral_v7.23.0.1220.exe'
-$RazerGameManagerUrl = 'https://manifest-assets.razersynapse.com/1771912713VmKGN0gDRazerGameManager_3.13.0.1050.exe'
-$RazerAppEngineChecksum = 'b4467e364b484735fb9ce16944b29c262c6fdc8c253a57f9be092c3ff4f2aab1'
-$RazerSynapse4Checksum = 'be40903e8ce15a2d9912e7f8ba2ab54d71495637d5252b06372a34e741e8dcbb'
-$RazerChromaChecksum = '1fca7983ca90dae1a63f970e6f0489f382da9cb31073a1d85572719aeae9298e'
+$RazerGameManagerUrl = 'https://manifest-assets.razersynapse.com/1785486685H9YLgvmuRazerGameManager_3.15.0.1200.exe'
+$RazerAppEngineChecksum = '3f7f0be00f4a8a0304760d2dda507bdbec0b9b643dec39dffd7e9b430bb94265'
+$RazerSynapse4Checksum = '477a5de23a220a33229869fbbde2e761db98f6c84da6219a46d8419fc835770b'
+$RazerChromaChecksum = 'ef28b718b22791cc09ae16f7f6079a1b50017be31eab7a699b9850e838475d5e'
 $RazerCentralChecksum = 'aace29226ac0cdf023dc06ebf4cfaac54597138d42810da0cbe99b8a90dc3fd8'
-$RazerGameManagerChecksum = '82ee0061eab3929c8718736b370a70ef1956d7c1202d698a983d69e14c9ff73e'
+$RazerGameManagerChecksum = '352655029a1f3d9ba2425a2818475d2b82e29d16f874a852b426ac49edff3171'
 
 $RazerAppEnginePackageArgs = @{
   packageName    = 'Razer App Engine'
