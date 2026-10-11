@@ -65,21 +65,41 @@ if ($xgproSetupExtractProcess.StartInfo.RedirectStandardError) { $xgproSetupExtr
 $xgproSetupExtractProcess.WaitForExit()
 $xgproSetupExtractProcess.Dispose()
 
-$fileLocation = Join-Path $xgproSetupFileDir "drv\DPInst64.exe"
-
-$packageArgs = @{
-  packageName    = $env:ChocolateyPackageName
-  unzipLocation  = $toolsDir
-  fileType       = 'EXE'
-  file           = $fileLocation
-  softwareName   = 'Xgpro USB Driver'
-  checksum       = 'FE76503B53CCADA59C79054193AD0F9CE8C3A28C156C6BCB1C58C99ABA091C4E'
-  checksumType   = 'sha256'
-  silentArgs     = "/S"
-  validExitCodes = @(0, 3010, 1641, 256)
+$xgproDriverDir = Join-Path $xgproSetupFileDir "drv"
+if ((Get-OSArchitectureWidth) -eq 64) {
+  $dpinst = Join-Path $xgproDriverDir "DPInst64.exe"
+  $driverCatalog = Join-Path $xgproDriverDir "xgprowinusbx64.cat"
+} else {
+  $dpinst = Join-Path $xgproDriverDir "DPInst.exe"
+  $driverCatalog = Join-Path $xgproDriverDir "xgprowinusbx86.cat"
 }
 
-Install-ChocolateyInstallPackage @packageArgs
+# The driver is Authenticode-signed by the vendor (not WHQL), so Windows asks the user
+# to trust the publisher before installing it. DPInst can't show that prompt in silent
+# mode and fails, so add the publisher's certificate to TrustedPublisher first.
+$driverSignature = Get-AuthenticodeSignature $driverCatalog
+if ($driverSignature.Status -ne 'Valid') {
+  throw "Driver catalog signature is not valid: $($driverSignature.StatusMessage)"
+}
+Write-Warning "Adding the Xgpro driver publisher certificate ($($driverSignature.SignerCertificate.Subject), thumbprint $($driverSignature.SignerCertificate.Thumbprint)) to the LocalMachine\TrustedPublisher store. It is not removed on uninstall."
+$trustedPublisherStore = New-Object System.Security.Cryptography.X509Certificates.X509Store('TrustedPublisher', 'LocalMachine')
+$trustedPublisherStore.Open('ReadWrite')
+$trustedPublisherStore.Add($driverSignature.SignerCertificate)
+$trustedPublisherStore.Close()
+
+# Install driver
+# DPInst returns a bitmask (0xWWXXYYZZ) rather than a plain exit code:
+#   0x80000000 = a driver package could not be installed, 0x40000000 = restart required
+#   XX = packages that failed, YY = packages copied to the driver store, ZZ = packages installed on a device
+$dpinstProcess = Start-Process -FilePath $dpinst -ArgumentList '/S' -WorkingDirectory $xgproDriverDir -Wait -PassThru
+$dpinstExitCode = $dpinstProcess.ExitCode
+Write-Debug ("DPInst exited with 0x{0:X8}" -f $dpinstExitCode)
+if (($dpinstExitCode -band 0x80000000) -or (($dpinstExitCode -shr 16) -band 0xFF)) {
+  throw ("Xgpro USB driver install failed. DPInst exit code was 0x{0:X8}. See C:\Windows\DPINST.LOG for details." -f $dpinstExitCode)
+}
+if ($dpinstExitCode -band 0x40000000) {
+  Write-Warning "A restart is required to finish installing the Xgpro USB driver."
+}
 
 # Copy Xgpro files into folder
 Copy-Item "$xgproSetupFileDir\" $xgproInstallDir -Recurse -Force

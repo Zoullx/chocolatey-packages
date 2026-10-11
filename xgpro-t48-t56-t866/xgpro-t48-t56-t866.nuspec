@@ -26,7 +26,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>13.16</version>
+    <version>13.16.0.00002</version>
     <packageSourceUrl>https://github.com/Zoullx/chocolatey-packages/tree/master/xgpro-t48-t56-t866</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>Zoull</owners>
@@ -40,7 +40,7 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <projectUrl>http://www.xgecu.com/EN/download.html</projectUrl>
     <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
     <!-- Here is an example using Githack -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages/xgpro-t48-t56-t866/xgpro-t48-t56-t866.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Zoullx/chocolatey-packages@0715c3f84b0c467b971ab0adfaada0a53db195b3/xgpro-t48-t56-t866/xgpro-t48-t56-t866.png</iconUrl>
     <copyright>© Haikou Xingong Electronic Co,Ltd</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl> -->
@@ -52,6 +52,8 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <tags>xgecu xgpro t48 t56 t866 programmer soic wson</tags>
     <summary>Super performance/Super speed/ Super small portable/ Cool appearance/ Low power consumption / Super stability</summary>
     <description>
+**Note:** The Xgpro USB driver is signed by the vendor but not WHQL-signed. To install it silently, this package adds the driver publisher's certificate to the `LocalMachine\TrustedPublisher` certificate store. Uninstalling the package does not remove the certificate.
+
 # XGecu T48 Universal programmer
 
 SIZE: 10cm x 6.5cm x 2.8cm
